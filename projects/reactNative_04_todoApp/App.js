@@ -1,10 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text>App</Text>
+      <FlatList renderItem={todoRender} />
     </View>
   );
 };
