@@ -24,13 +24,16 @@ export default StyleSheet.create({
     marginBottom: 10,
     paddingTop: 20,
     paddingBottom: 20,
-    backgroundColor: '#68a0cf',
-    borderRadius: 10,
+    backgroundColor: 'gray',
+    borderRadius: 15,
     borderWidth: 1,
-    borderColor: '#fff',
+    // borderColor: '#fff',
+
   },
   submitText: {
     color: '#fff',
     textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 20,
   },
 });

@@ -19,7 +19,7 @@ const Footer = ({onChange}) => {
         isFocused
       />
       <TouchableHighlight style={styles.submit} underlayColor="#208080">
-        <Text style={styles.submitText}>Submit</Text>
+        <Text style={styles.submitText}>Kaydet</Text>
       </TouchableHighlight>
     </View>
   );
