@@ -11,11 +11,11 @@ export default StyleSheet.create({
     padding: 10,
   },
   input: {
-    color: '#808080',
+    color: 'white',
     fontSize: 20,
     borderBottomWidth: 3,
     borderColor: 'olive',
-    marginBottom: 15,
+    marginBottom: 10,
   },
   submit: {
     marginRight: 40,
