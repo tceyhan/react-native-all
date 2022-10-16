@@ -10,7 +10,10 @@ const App = () => {
     {id: '2', text: 'deneme2'},
   ]);
   const [text, setText] = useState('');
-  const onChange = () => {};
+  const onChange = text => {
+    todoList.push(text);
+    setText('');
+  };
 
   // const todoRender = ({item}) => console.log(<Text>{item.text}</Text>);
   const todoRender = ({item}) => <TodoItem todo={item} />;
@@ -22,7 +25,7 @@ const App = () => {
         data={todoList}
         renderItem={todoRender}
       />
-      <Footer onChange={onChange} text={text} />
+      <Footer onChange={onChange} text={text} setText={setText} />
     </View>
   );
 };
