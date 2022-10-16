@@ -10,6 +10,8 @@ const SearchBar = ({onSearch}) => {
       <TextInput
        placeholder="Ara.."
        onChangeText={onSearch}
+       placeholderTextColor={'red'}
+       selectTextOnFocus
        />
     </View>
   )
