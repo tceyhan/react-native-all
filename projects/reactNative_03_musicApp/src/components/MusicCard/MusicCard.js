@@ -11,7 +11,7 @@ const MusicCard = props => {
         <Text style={styles.title}>{props.song.title}</Text>
         <View style={styles.content_container}>
           <View style={styles.info_container}>
-            <Text>{props.song.artist}</Text>
+            <Text style={styles.artist}>{props.song.artist}</Text>
             <Text style={styles.year}>{props.song.year}</Text>
           </View>
           {props.song.isSoldOut && (
@@ -20,6 +20,7 @@ const MusicCard = props => {
             </View>
           )}
         </View>
+        <Text style={styles.album}>Albüm</Text>
       </View>
     </View>
   );

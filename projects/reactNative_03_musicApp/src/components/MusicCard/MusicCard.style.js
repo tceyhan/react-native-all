@@ -3,6 +3,7 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
+    backgroundColor: 'whitegray',
     padding: 10,
     flexDirection: 'row',
   },
@@ -14,15 +15,15 @@ export default StyleSheet.create({
   inner_container: {
     padding: 10,
     flex: 1,
-    // flex içerisinde bulunduğu yer kadar yer kaplar 
+    // flex içerisinde bulunduğu yer kadar yer kaplar
     justifyContent: 'center',
   },
   title: {
+    color: 'black',
     fontWeight: 'bold',
     fontSize: 27,
   },
-  content_container:{
-   
+  content_container: {
     flexDirection: 'row',
   },
   info_container: {
@@ -30,8 +31,11 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  artist: {
+    color: 'black',
+  },
   year: {
-    marginLeft:12,
+    marginLeft: 12,
     color: 'gray',
     fontWeight: 'bold',
     fontSize: 12,
@@ -45,5 +49,18 @@ export default StyleSheet.create({
   soldout_title: {
     color: 'red',
     fontSize: 12,
+  },
+  album: {
+    color: 'green',
+    fontSize: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    fontWeight: 'bold',
+    width: 50,
+    marginTop: 5,
+    padding: 2,
+    textAlign: 'center',
+   
+ 
   },
 });
