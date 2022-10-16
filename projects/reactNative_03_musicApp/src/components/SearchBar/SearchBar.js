@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Text, View, TextInput } from 'react-native'
+import { View, TextInput } from 'react-native'
 import React from 'react'
 import styles from './SearchBar.style';
 
@@ -10,8 +10,7 @@ const SearchBar = ({onSearch}) => {
       <TextInput
        placeholder="Ara.."
        onChangeText={onSearch}
-       placeholderTextColor={'red'}
-       selectTextOnFocus
+       placeholderTextColor={'red'}      
        />
     </View>
   )

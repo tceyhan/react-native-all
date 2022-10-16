@@ -6,5 +6,10 @@
 
 ## Skills
 - Usestate
-- onChange
+- onChangeText
 - filter
+* ItemSeparatorComponent  used in FlatList component
+## CSS
+```
+ placeholderTextColor={'red'} used in TextInput
+```
