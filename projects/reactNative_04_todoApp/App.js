@@ -4,15 +4,18 @@ import Header from './src/header/Header';
 import Footer from './src/footer/Footer';
 import TodoItem from './src/todoitem/TodoItem';
 
+const initialTodo = [
+  'React Native Document will have been read',
+  'Django project will been have done',
+];
+
 const App = () => {
-  const [todoList, setTodoList] = useState([
-    {id: '1', text: 'deneme'},
-    {id: '2', text: 'deneme2'},
-  ]);
+  const [todoList, setTodoList] = useState(initialTodo);
   const [text, setText] = useState('');
-  const onChange = text => {
-    todoList.push(text);
-    setText('');
+  const onChange = value => {
+    setText(value);
+    console.log(text);
+    setTodoList([...todoList], text);
   };
 
   // const todoRender = ({item}) => console.log(<Text>{item.text}</Text>);
@@ -21,7 +24,7 @@ const App = () => {
     <View style={styles.container}>
       <Header />
       <FlatList
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.index}
         data={todoList}
         renderItem={todoRender}
       />

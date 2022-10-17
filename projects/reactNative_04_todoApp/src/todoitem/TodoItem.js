@@ -4,10 +4,9 @@ import React from 'react';
 import styles from './TodoItem.style';
 
 const TodoItem = ({todo}) => {
-  console.log(todo)
   return (
     <View style={styles.container}>
-      <Text style={styles.todo_text}>{todo.text}</Text>
+      <Text style={styles.todo_text}>{todo}</Text>
     </View>
   );
 };
