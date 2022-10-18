@@ -5,7 +5,7 @@
 
 ## Project Images
 
-![Image_1](./media/todoApp_image_1.png) ![Image_1](./media/todoApp_image_2.png)![Image_1](./media/todoApp_image_3.png)
+![Image_1](./media/todoApp_image_1.png) ![Image_2](./media/todoApp_image_2.png) ![Image_3](./media/todoApp_image_3.png)
 
 ## Used Components and Properties
 - View
