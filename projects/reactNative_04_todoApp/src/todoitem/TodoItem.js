@@ -3,10 +3,10 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import styles from './TodoItem.style';
 
-const TodoItem = ({todo, handleRemoveTodo}) => {
+const TodoItem = ({todo, handleRemoveTodo, handleCompletedTodo}) => {
   return (
     <View style={styles.container} >
-      <Text style={styles.todo_text} onLongPress={() => handleRemoveTodo(todo.id)}>{todo.todo}</Text>
+      <Text style={styles.todo_text} onLongPress={() => handleRemoveTodo(todo.id)} onPress={()=>handleCompletedTodo(todo.id)}>{todo.todo}</Text>
     </View>
   );
 };

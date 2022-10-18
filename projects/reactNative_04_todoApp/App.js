@@ -38,15 +38,25 @@ const App = () => {
   };
   console.log(todoList);
 
+  const handleCompletedTodo = todoId => {
+    const completedTodoList = todoList.filter(item => item.id === todoId);
+    console.log(completedTodoList);    
+  };
+
   const handleRemoveTodo = todoId => {
     const filteredTodoList = todoList.filter(item => item.id !== todoId);
     console.log(filteredTodoList);
     setTodoList(filteredTodoList);
+    setTodoCount(todoCount - 1);
   };
 
   // const todoRender = ({item}) => console.log(<Text>{item.text}</Text>);
   const todoRender = ({item}) => (
-    <TodoItem todo={item} handleRemoveTodo={handleRemoveTodo} />
+    <TodoItem
+      todo={item}
+      handleRemoveTodo={handleRemoveTodo}
+      handleCompletedTodo={handleCompletedTodo}
+    />
   );
   return (
     <View style={styles.container}>
