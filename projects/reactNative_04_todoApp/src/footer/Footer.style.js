@@ -30,7 +30,7 @@ export default StyleSheet.create({
     borderRadius: 20,
     borderWidth: 1,
     // borderColor: '#fff',
-  }, 
+  },
   submit_empty: {
     // marginRight: 40,
     // marginLeft: 40,
@@ -41,11 +41,10 @@ export default StyleSheet.create({
     // paddingTop: 20,
     // paddingBottom: 20,
     paddingVertical: 20,
-    backgroundColor: 'gray',
     borderRadius: 20,
     borderWidth: 1,
     backgroundColor: 'orange',
-  }, 
+  },
   submitText: {
     color: '#fff',
     textAlign: 'center',

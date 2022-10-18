@@ -19,7 +19,7 @@ const App = () => {
     console.log(text);
     const randomId = Math.floor(Math.random() * 1000 + 1);
     if (text.length >= 5) {
-      const newTodo = {id: randomId, todo: text, isDone: false};
+      const newTodo = {id: randomId, todo: text.charAt(0).toUpperCase() + text.slice(1), isDone: false};
       setTodoList([...todoList, newTodo]);
       setTodoCount(todoCount + 1);
     } else {

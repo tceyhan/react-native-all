@@ -13,12 +13,11 @@ export default StyleSheet.create({
   todo_text: {
     color: 'white',
     fontSize: 18,
-    textTransform: 'capitalize',
+    // textTransform: 'capitalize',
   },
   todo_text_done: {
     fontSize: 18,
     color: 'gray',
     textDecorationLine: 'line-through',
-    textTransform: 'capitalize',
   },
 });
