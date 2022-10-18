@@ -15,7 +15,7 @@ export default StyleSheet.create({
     color: 'orange',
     fontSize: 24,
     fontWeight: 'bold',
-    backgroundColor: 'olive',
+    backgroundColor: 'grey',
     borderWidth: 1,
     borderRadius: 50,
   },

@@ -14,7 +14,7 @@ const Footer = ({onChange, value, handleList}) => {
         onChangeText={onChange}
         value={value}
       />
-      <TouchableHighlight style={styles.submit} underlayColor="#208080" onPress={handleList}>
+      <TouchableHighlight style={value === '' ? styles.submit : styles.submit_empty} underlayColor="orange"  onPress={handleList}>
         <Text style={styles.submitText}>Kaydet</Text>
       </TouchableHighlight>
     </View>
