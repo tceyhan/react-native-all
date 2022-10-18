@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {Alert, FlatList, StyleSheet, View} from 'react-native';
 import React, {useState} from 'react';
 import Header from './src/header/Header';
@@ -13,6 +14,7 @@ const App = () => {
   const [todoCount, setTodoCount] = useState(0);
   const [todoList, setTodoList] = useState(initialTodo);
   const [text, setText] = useState('');
+  const [completed, setCompleted] = useState(false);
 
   const onChange = value => {
     // console.log(value);
@@ -23,10 +25,8 @@ const App = () => {
     console.log(text);
     const randomId = Math.floor(Math.random() * 1000);
     if (text.length >= 5) {
-      setTodoList([
-        ...todoList,
-        {id: randomId, todo: text.charAt(0).toUpperCase() + text.slice(1)},
-      ]);
+      const newTodo = {id: randomId, todo: text, isDone:false};
+      setTodoList([...todoList, newTodo ]);
       setTodoCount(todoCount + 1);
     } else {
       const uyari = 'Todo cümlesi 5 harften küçük olamaz!!';
@@ -36,16 +36,15 @@ const App = () => {
     setText('');
     //? input değeri sıfırlanmalı ki her defasında eski text'i silip yenisini yazmak zorunda kalmayalım.
   };
-  console.log(todoList);
+  // console.log(todoList);
 
-  const handleCompletedTodo = todoId => {
-    const completedTodoList = todoList.filter(item => item.id === todoId);
-    console.log(completedTodoList);    
+  const handleCompletedTodo = () => {
+    setCompleted(!completed);
   };
 
   const handleRemoveTodo = todoId => {
     const filteredTodoList = todoList.filter(item => item.id !== todoId);
-    console.log(filteredTodoList);
+    // console.log(filteredTodoList);
     setTodoList(filteredTodoList);
     setTodoCount(todoCount - 1);
   };
@@ -56,6 +55,7 @@ const App = () => {
       todo={item}
       handleRemoveTodo={handleRemoveTodo}
       handleCompletedTodo={handleCompletedTodo}
+      isDone={completed}
     />
   );
   return (
