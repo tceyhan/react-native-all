@@ -23,10 +23,10 @@ const App = () => {
 
   const handleList = () => {
     console.log(text);
-    const randomId = Math.floor(Math.random() * 1000);
+    const randomId = Math.floor(Math.random() * 1000 + 1);
     if (text.length >= 5) {
-      const newTodo = {id: randomId, todo: text, isDone:false};
-      setTodoList([...todoList, newTodo ]);
+      const newTodo = {id: randomId, todo: text, isDone: completed};
+      setTodoList([...todoList, newTodo]);
       setTodoCount(todoCount + 1);
     } else {
       const uyari = 'Todo cümlesi 5 harften küçük olamaz!!';
@@ -38,7 +38,11 @@ const App = () => {
   };
   // console.log(todoList);
 
-  const handleCompletedTodo = () => {
+  const handleCompletedTodo = todoId => {
+    const result = todoList.map(todo =>
+      todo.id === todoId ? {...todo, isDone: !todo.isDone} : todo,
+    );
+    setTodoList(result);
     setCompleted(!completed);
   };
 
