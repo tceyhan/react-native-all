@@ -38,13 +38,21 @@ const App = () => {
   };
   console.log(todoList);
 
+  const handleRemoveTodo = todoId => {
+    const filteredTodoList = todoList.filter(item => item.id !== todoId);
+    console.log(filteredTodoList);
+    setTodoList(filteredTodoList);
+  };
+
   // const todoRender = ({item}) => console.log(<Text>{item.text}</Text>);
-  const todoRender = ({item}) => <TodoItem todo={item} />;
+  const todoRender = ({item}) => (
+    <TodoItem todo={item} handleRemoveTodo={handleRemoveTodo} />
+  );
   return (
     <View style={styles.container}>
       {/* <Header /> */}
       <FlatList
-        ListHeaderComponent={() => <Header count={todoCount}/>}
+        ListHeaderComponent={() => <Header count={todoCount} />}
         keyExtractor={item => item.id}
         data={todoList}
         renderItem={todoRender}
