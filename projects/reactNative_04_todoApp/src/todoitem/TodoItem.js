@@ -7,9 +7,9 @@ const TodoItem = ({todo, handleRemoveTodo, handleCompletedTodo, isDone}) => {
   return (
     <View style={styles.container}>
       <Text
-        style={isDone? styles.todo_text_done : styles.todo_text}
+        style={todo.isDone ? styles.todo_text_done : styles.todo_text}
         onLongPress={() => handleRemoveTodo(todo.id)}
-        onPress={handleCompletedTodo}>
+        onPress={() => handleCompletedTodo(todo.id)}>
         {todo.todo}
       </Text>
     </View>

@@ -5,16 +5,11 @@ import Header from './src/header/Header';
 import Footer from './src/footer/Footer';
 import TodoItem from './src/todoitem/TodoItem';
 
-const initialTodo = [
-  // {id: 1, todo: 'React Native Document will have been read'},
-  // {id: 2, todo: 'Django project will been have done'},
-];
-
 const App = () => {
   const [todoCount, setTodoCount] = useState(0);
-  const [todoList, setTodoList] = useState(initialTodo);
+  const [todoList, setTodoList] = useState([]);
   const [text, setText] = useState('');
-  const [completed, setCompleted] = useState(false);
+ 
 
   const onChange = value => {
     // console.log(value);
@@ -25,7 +20,7 @@ const App = () => {
     console.log(text);
     const randomId = Math.floor(Math.random() * 1000 + 1);
     if (text.length >= 5) {
-      const newTodo = {id: randomId, todo: text, isDone: completed};
+      const newTodo = {id: randomId, todo: text, isDone: false};
       setTodoList([...todoList, newTodo]);
       setTodoCount(todoCount + 1);
     } else {
@@ -43,7 +38,7 @@ const App = () => {
       todo.id === todoId ? {...todo, isDone: !todo.isDone} : todo,
     );
     setTodoList(result);
-    setCompleted(!completed);
+
   };
 
   const handleRemoveTodo = todoId => {
@@ -59,12 +54,11 @@ const App = () => {
       todo={item}
       handleRemoveTodo={handleRemoveTodo}
       handleCompletedTodo={handleCompletedTodo}
-      isDone={completed}
+      isDone={item.isDone}
     />
   );
   return (
     <View style={styles.container}>
-      {/* <Header /> */}
       <FlatList
         ListHeaderComponent={() => <Header count={todoCount} />}
         keyExtractor={item => item.id}
