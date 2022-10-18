@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {View, Text, TextInput, TouchableHighlight} from 'react-native';
-import React, { useState } from 'react';
+import React  from 'react';
 import styles from './Footer.style';
 
 const Footer = ({onChange, value, handleList}) => {

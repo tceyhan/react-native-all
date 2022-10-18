@@ -9,7 +9,6 @@ const App = () => {
   const [todoCount, setTodoCount] = useState(0);
   const [todoList, setTodoList] = useState([]);
   const [text, setText] = useState('');
- 
 
   const onChange = value => {
     // console.log(value);

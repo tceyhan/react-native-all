@@ -9,5 +9,14 @@ export default StyleSheet.create({
     margin: 10,
   },
   title: {color: 'orange', fontSize: 24, fontWeight: 'bold'},
-  number: {width: 30, textAlign: 'center', color: 'orange', fontSize: 24, fontWeight: 'bold', backgroundColor: 'olive', borderWidth: 1, borderRadius: 50,},
+  number: {
+    width: 30,
+    textAlign: 'center',
+    color: 'orange',
+    fontSize: 24,
+    fontWeight: 'bold',
+    backgroundColor: 'olive',
+    borderWidth: 1,
+    borderRadius: 50,
+  },
 });
