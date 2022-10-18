@@ -1,4 +1,4 @@
-import {FlatList, StyleSheet, View} from 'react-native';
+import {Alert, FlatList, StyleSheet, View} from 'react-native';
 import React, {useState} from 'react';
 import Header from './src/header/Header';
 import Footer from './src/footer/Footer';
@@ -10,6 +10,7 @@ const initialTodo = [
 ];
 
 const App = () => {
+  const [todoCount, setTodoCount] = useState(0);
   const [todoList, setTodoList] = useState(initialTodo);
   const [text, setText] = useState('');
 
@@ -21,7 +22,16 @@ const App = () => {
   const handleList = () => {
     console.log(text);
     const randomId = Math.floor(Math.random() * 1000);
-    setTodoList([...todoList, {id: randomId, todo: text}]);
+    if (text.length >= 5) {
+      setTodoList([
+        ...todoList,
+        {id: randomId, todo: text.charAt(0).toUpperCase() + text.slice(1)},
+      ]);
+      setTodoCount(todoCount + 1);
+    } else {
+      const uyari = 'Todo cümlesi 5 harften küçük olamaz!!';
+      Alert.alert(uyari);
+    }
     //! burada listeyi spread metot ile açıyoruz ve virgül ile eklemek istediğimiz yeni liste elemanını tanımlıyoruz ancak liste elemanlarımız obje olduğu için obje olarak göndermemiz gerekir.
     setText('');
     //? input değeri sıfırlanmalı ki her defasında eski text'i silip yenisini yazmak zorunda kalmayalım.
@@ -32,8 +42,9 @@ const App = () => {
   const todoRender = ({item}) => <TodoItem todo={item} />;
   return (
     <View style={styles.container}>
-      <Header />
+      {/* <Header /> */}
       <FlatList
+        ListHeaderComponent={() => <Header count={todoCount}/>}
         keyExtractor={item => item.id}
         data={todoList}
         renderItem={todoRender}
