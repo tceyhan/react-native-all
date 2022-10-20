@@ -10,7 +10,12 @@ const Router = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="HomeScreen" component={First} />
+    {/* initialRouteName="ProfileScreen" verilebilir burda sıralamaya uymak istemez isek */}
+        <Stack.Screen
+          name="HomeScreen"
+          component={First}
+          options={{title: 'AnaSayfa'}}
+        />
         <Stack.Screen name="ProfileScreen" component={Second} />
       </Stack.Navigator>
     </NavigationContainer>

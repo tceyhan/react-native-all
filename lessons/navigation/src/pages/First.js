@@ -4,7 +4,7 @@ import React from 'react';
 
 const First = ({navigation}) => {
     const navigateToPage = () => {
-        navigation.navigate('ProfileScreen');
+        navigation.navigate('ProfileScreen', {username: 'tarık ceyhan'});
     };
   return (
     <View style={styles.container}>

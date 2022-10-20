@@ -2,10 +2,15 @@
 import {View, Text, StyleSheet, Button} from 'react-native';
 import React from 'react';
 
-const Second = ({navigation}) => {
+const Second = ({navigation, route}) => {
+
+  console.log(route);
+  // route içerisinde params kısmında gönderdiğimiz obje gelir.
+ const user = route.params.username;
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Second</Text>
+      <Text style={styles.text}>{user}</Text>
       <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
   );
