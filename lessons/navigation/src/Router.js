@@ -14,7 +14,16 @@ const Router = () => {
         <Stack.Screen
           name="HomeScreen"
           component={First}
-          options={{title: 'AnaSayfa'}}
+          options={{
+            title: 'My home',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
         />
         <Stack.Screen name="ProfileScreen" component={Second} />
       </Stack.Navigator>

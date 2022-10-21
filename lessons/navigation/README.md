@@ -70,3 +70,56 @@ function App() {
 export default App;```
 
 ### bu şekliyle en temel stack navigation hazırlanmış oldu
+
+## Navigation Properties
+- navigation.navigate('RouteName')=> burada Stack.screen olarak verdiğimiz name kullanılır.
+- navigation.goBack()  => bir önceki sayfaya yönlendirir.
+- navigation.push('Details') => sıralaması önemli olmadan screen hangi sırada olursa olsun oraya yönlendirir.
+- navigation.popToTop() => ilk screen sayfası neresi ise oraya yönlendirir.
+- Eğer initial bir params göndermek istersek;
+```<Stack.Screen
+  name="Details"
+  component={DetailsScreen}
+  initialParams={{ itemId: 42 }}
+/>
+```
+ bu şekilde initialParams propertisinden faydalanabiliriz.
+
+- params "setParams" ile değiştirilebilir ancak çok tavsiye edilmiyor.Basic kullanımı;
+```navigation.setParams({
+  query: 'someText',
+});
+```
+- Eğer paramsı iki farklı screen'e göndereceksek;
+```
+navigation.navigate('Account', {
+  screen: 'Settings',
+  params: { user: 'jane' },
+});
+```
+burada Account screen içerisine Settings screen mevcutsa params bu örnekte olduğu geçirilmelidir.
+
+- Dikkat edilmesi gereken konu;
+  * birden fazla screen tarafından kullanılan verileri iletmekten kaçının, bu tür veriler global bir depoda olmalıdır.
+  * Ekranın kendisinde görüntülenecek olan tüm verileri iletmekten kaçının
+
+ ## Stack.Screen Style
+ - Stack.Screen içerisinde options ayarları ile başlık kısmında stil çalımaları yapılabilir
+  ```
+<Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          title: 'My home',
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
+    </Stack.Navigator>
+  ```
