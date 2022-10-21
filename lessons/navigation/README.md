@@ -118,6 +118,7 @@ burada Account screen içerisine Settings screen mevcutsa params bu örnekte old
           headerTintColor: '#fff',
           headerTitleStyle: {
             fontWeight: 'bold',
+            
           },
         }}
       />
