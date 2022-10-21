@@ -124,3 +124,5 @@ burada Account screen içerisine Settings screen mevcutsa params bu örnekte old
       />
     </Stack.Navigator>
   ```
+![](./media/first_screen.png)
+![](./media/second_screen.png)
