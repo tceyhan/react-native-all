@@ -2,11 +2,9 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    
-  },
-  text: {
-    fontSize: 30,
-  },
+  container: {},
+  image: {},
+  body_container: {},
+  title: {},
+  price: {},
 });

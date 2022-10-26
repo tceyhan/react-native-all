@@ -50,3 +50,23 @@ export default App;
 ```
 :) finally project ready..
 
+12. ``` npm i react-native-config ```
+Create a new file .env in the root of your React Native app:
+```
+API_URL=https://myapi.com
+GOOGLE_MAPS_API_KEY=abcdefgh
+```
+Then access variables defined there from your app:
+```
+import Config from "react-native-config";
+
+Config.API_URL; // 'https://myapi.com'
+Config.GOOGLE_MAPS_API_KEY; // 'abcdefgh'
+```
+
+13.Extra step for Android
+You'll also need to manually apply a plugin to your app, from *android/app/build.gradle:*
+```// 2nd line, add a new apply:
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+```
+
