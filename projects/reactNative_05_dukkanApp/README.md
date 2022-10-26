@@ -14,7 +14,7 @@
 ## Used styles and component
 - FlatList component
 - resizeMode used in Image component
-- 
+- [lottie package for animation](https://www.npmjs.com/package/lottie-react-native)
 
 ### project start and required Settings
 
@@ -79,4 +79,5 @@ You'll also need to manually apply a plugin to your app, from *android/app/build
 ```// 2nd line, add a new apply:
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 ```
-
+14. for animation loading, error etc.
+ ```npm i lottie-react-native```
