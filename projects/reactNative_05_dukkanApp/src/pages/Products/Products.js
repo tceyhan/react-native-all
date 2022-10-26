@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
-import {View, FlatList, Text} from 'react-native';
+import {FlatList} from 'react-native';
 import React from 'react';
-import styles from './Product.style';
+
 import Config from 'react-native-config';
 import ProductCard from '../../components/ProductCard';
 import useFetch from '../../hooks/useFetch/useFetch';
@@ -9,7 +9,6 @@ import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
 const Products = () => {
-
   //! custom hook created
   const {loading, data, error} = useFetch(Config.API_URL);
   console.log('render');
@@ -25,11 +24,7 @@ const Products = () => {
   if (error) {
     return <Error />;
   }
-  return (
-    <View style={styles.container}>
-      <FlatList data={data} renderItem={renderItem} />
-    </View>
-  );
+  return <FlatList data={data} renderItem={renderItem} />;
 };
 
 export default Products;
