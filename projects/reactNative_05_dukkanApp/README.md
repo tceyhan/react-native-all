@@ -5,6 +5,16 @@
 
 
 ## Used skills
+- Custom hooks created named useFetch
+- useState, useEffect
+- fetch data from API with *axios*
+- *ActivityIndicator* for loading while data fetching
+- destructred method for styles objects
+
+## Used styles and component
+- FlatList component
+- resizeMode used in Image component
+- 
 
 ### project start and required Settings
 

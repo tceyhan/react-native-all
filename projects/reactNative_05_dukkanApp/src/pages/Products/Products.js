@@ -1,25 +1,28 @@
 /* eslint-disable prettier/prettier */
-import {View, Text, FlatList} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import {View, FlatList, ActivityIndicator, Text} from 'react-native';
+import React from 'react';
 import styles from './Product.style';
 import Config from 'react-native-config';
-import axios from 'axios';
+
 import ProductCard from '../../components/ProductCard';
+import useFetch from '../../hooks/useFetch/useFetch';
 
 const Products = () => {
-  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const {data:productData} = await axios.get(Config.API_URL);
-    console.log(productData);
-    setData(productData);
-  };
+//! custom hook created 
+  const {loading, data, error} = useFetch(Config.API_URL);
+  console.log('render');
+  console.log(loading, error, data.length);
+  console.log('---------------');
 
   const renderItem = ({item}) => <ProductCard product={item} />;
+
+  if (loading) {
+    return <ActivityIndicator size="large" />;
+  }
+  if (error) {
+    return <Text>{error}</Text>;
+  }
   return (
     <View style={styles.container}>
       <FlatList data={data} renderItem={renderItem} />
