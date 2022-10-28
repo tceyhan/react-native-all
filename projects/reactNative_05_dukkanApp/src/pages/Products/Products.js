@@ -7,6 +7,7 @@ import useFetch from '../../hooks/useFetch/useFetch';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 import SearchBar from '../../components/SearchBar';
+import Category from '../../components/Category';
 
 const Products = ({navigation}) => {
   //! custom hook created
@@ -48,6 +49,7 @@ const Products = ({navigation}) => {
     <View>
       <SearchBar handleSearch={handleSearch} />
       <FlatList data={newList} renderItem={renderItem} />
+      {/* numColumns={2} may be added */}
     </View>
   );
 };
