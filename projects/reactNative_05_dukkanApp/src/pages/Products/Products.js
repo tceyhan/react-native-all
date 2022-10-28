@@ -1,11 +1,12 @@
 /* eslint-disable prettier/prettier */
-import {FlatList} from 'react-native';
+import {FlatList, View} from 'react-native';
 import React from 'react';
 import Config from 'react-native-config';
 import ProductCard from '../../components/ProductCard';
 import useFetch from '../../hooks/useFetch/useFetch';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
+import SearchBar from '../../components/SearchBar';
 
 const Products = ({navigation}) => {
   //! custom hook created
@@ -29,7 +30,12 @@ const Products = ({navigation}) => {
   if (error) {
     return <Error />;
   }
-  return <FlatList data={data} renderItem={renderItem} />;
+  return (
+    <View>
+      <SearchBar />
+      <FlatList data={data} renderItem={renderItem} />;
+    </View>
+  );
 };
 
 export default Products;
