@@ -4,7 +4,7 @@ import React from 'react';
 
 const CategoryCard = ({category, categoryFilter}) => {
   return (
-    <TouchableWithoutFeedback onPress={categoryFilter}>
+    <TouchableWithoutFeedback onPress={() => categoryFilter(category)}>
       <View style={styles.button}>
         <Text style={styles.text}>{category.toUpperCase()}</Text>
       </View>

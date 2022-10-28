@@ -5,4 +5,19 @@ export default StyleSheet.create({
   category_container: {
     padding: 10,
   },
+  button: {
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 5,
+    borderWidth: 1,
+    backgroundColor: '#c54800',
+    borderRadius: 10,
+    marginRight: 5,
+  },
+  text: {
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: 'bold',
+  },
 });

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {ScrollView} from 'react-native';
+import {Button, ScrollView, Text, TouchableWithoutFeedback, View} from 'react-native';
 import React from 'react';
 
 import useFetch from '../../hooks/useFetch/useFetch';
@@ -12,7 +12,13 @@ import CategoryCard from './CategoryCard';
 const Category = ({setNewList, dataList}) => {
   const {loading, error, data} = useFetch(`${Config.API_URL}/categories`);
 
-  const categoryFilter = () => {};
+  const categoryFilter = category => {
+    console.log(dataList);
+    console.log(data);
+    console.log(category);
+    const last = dataList.filter(item => item.category === category);
+    setNewList(last);
+  };
 
   if (loading) {
     return <Loading />;
@@ -25,12 +31,18 @@ const Category = ({setNewList, dataList}) => {
       style={styles.category_container}
       horizontal
       showsHorizontalScrollIndicator={false}>
+      <TouchableWithoutFeedback onPress={() => setNewList(dataList)}>
+      <View style={styles.button}>
+        <Text style={styles.text}>ALL</Text>
+      </View>
+    </TouchableWithoutFeedback>
       {data?.map(category => (
         <CategoryCard
           category={category}
           categoryFilter={categoryFilter}
           key={category}
         />
+      
       ))}
     </ScrollView>
   );
