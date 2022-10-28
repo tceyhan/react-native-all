@@ -9,7 +9,7 @@ export default StyleSheet.create({
     padding: 5,
     borderWidth: 1,
     borderRadius: 5,
-    backgroundColor: '#eee',
+    backgroundColor: '#e8f5e9',
   },
   image: {
     width: 100,
