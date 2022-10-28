@@ -12,10 +12,7 @@ import CategoryCard from './CategoryCard';
 const Category = ({setNewList, dataList}) => {
   const {loading, error, data} = useFetch(`${Config.API_URL}/categories`);
 
-  const categoryFilter = () => {
-
-  };
-
+  const categoryFilter = () => {};
 
   if (loading) {
     return <Loading />;

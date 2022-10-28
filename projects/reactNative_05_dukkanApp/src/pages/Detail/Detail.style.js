@@ -16,7 +16,7 @@ export default StyleSheet.create({
     backgroundColor: 'white',
   },
   body_container: {padding: 10},
-  desc: {fontStyle: 'italic', fontSize:20},
+  desc: {fontStyle: 'italic', fontSize:16},
   title: {fontWeight: 'bold', fontSize: 25, marginvertical: 5, color:'#af4448'},
   price: {fontWeight: 'bold', fontSize: 22, textAlign: 'right'},
 });
