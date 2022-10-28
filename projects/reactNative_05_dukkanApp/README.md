@@ -11,10 +11,12 @@
 - *ActivityIndicator* for loading while data fetching
 - destructred method for styles objects
 
+
 ## Used styles and component
 - FlatList component
 - resizeMode used in Image component
 - [lottie package for animation](https://www.npmjs.com/package/lottie-react-native)
+- headerTintColor, headerStyle,headerTitleStyle,headerTitleAlign properties used in Stack.Screen options object
 
 ### project start and required Settings
 
