@@ -9,23 +9,24 @@ import Error from '../../components/Error';
 import SearchBar from '../../components/SearchBar';
 
 const Products = ({navigation}) => {
-  
   //! custom hook created
   const {loading, data, error} = useFetch(Config.API_URL);
   const [newList, setNewList] = useState();
   console.log('render');
-  console.log(loading, error, data.length, newList);
+  // console.log(loading, error, data.length, newList);
   console.log('---------------');
+
   useEffect(() => {
     setNewList(data);
   }, [data]);
- 
+
   const handleSearch = text => {
     const filteredProducts = data.filter(product => {
       const searchedText = text.toLowerCase();
       const currentTitle = product.title.toLowerCase();
       return currentTitle.indexOf(searchedText) > -1;
     });
+    console.log(filteredProducts);
     setNewList(filteredProducts);
   };
   const handleProductSelect = id => {
@@ -45,7 +46,7 @@ const Products = ({navigation}) => {
   }
   return (
     <View>
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar handleSearch={handleSearch} />
       <FlatList data={newList} renderItem={renderItem} />
     </View>
   );

@@ -8,5 +8,6 @@ export default StyleSheet.create({
   },
   searchInput: {
     fontSize: 20,
+    color: '#FFFFFF',
   },
 });
