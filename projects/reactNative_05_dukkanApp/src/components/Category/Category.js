@@ -11,26 +11,11 @@ import CategoryCard from './CategoryCard';
 
 const Category = ({setNewList, dataList}) => {
   const {loading, error, data} = useFetch(`${Config.API_URL}/categories`);
-  //  console.log(data);
+
   const categoryFilter = () => {
-    console.log(data);
-    console.log(dataList);
 
-    switch (data[dataList.category]) {
-      case 'electronics':
-        console.log('deneme');
-        break;
-      case 'jewelery':
-        break;
-      case "men's clothing":
-        break;
-      case "women's clothing":
-        break;
-
-      default:
-        break;
-    }
   };
+
 
   if (loading) {
     return <Loading />;
