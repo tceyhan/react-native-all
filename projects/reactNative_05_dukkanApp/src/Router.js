@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {View, Text} from 'react-native';
+
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -16,19 +16,30 @@ const Router = () => {
           component={Products}
           options={{
             title: 'Dükkan',
-            headerStyle:{backgroundColor: '#007ac1'},
-            headerTitleStyle:{color: 'white', fontWeight: 'bold', fontSize:25},
-            headerTitleAlign:'center',
+            headerStyle: {backgroundColor: '#007ac1'},
+            headerTitleStyle: {
+              color: 'white',
+              fontWeight: 'bold',
+              fontSize: 25,
+            },
+            headerTitleAlign: 'center',
           }}
         />
-        <Stack.Screen name="DetailPage" component={Detail}      options={{
+        <Stack.Screen
+          name="DetailPage"
+          component={Detail}
+          options={{
             title: 'Detay',
-            headerStyle:{backgroundColor: '#007ac1'},
-            headerTitleStyle:{color: 'white', fontWeight: 'bold', fontSize:25},
-            headerTitleAlign:'center',
+            headerStyle: {backgroundColor: '#007ac1'},
+            headerTitleStyle: {
+              color: 'white',
+              fontWeight: 'bold',
+              fontSize: 25,
+            },
+            headerTitleAlign: 'center',
             headerTintColor: 'white',
           }}
-          />
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

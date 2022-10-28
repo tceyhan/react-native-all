@@ -9,7 +9,8 @@ const SearchBar = ({onSearch}) => {
       <TextInput
         placeholder="Ara.."
         onChangeText={onSearch}
-        placeholderTextColor={'red'}
+        placeholderTextColor={'white'}
+        style={styles.searchInput}
       />
     </View>
   );

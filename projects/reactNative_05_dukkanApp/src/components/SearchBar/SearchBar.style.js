@@ -2,9 +2,13 @@
 import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   container: {
-    backgroundColor: 'lightgrey',
-    padding: 8,
-    margin: 3,
-    borderRadius: 5,
+    backgroundColor: '#81b9bf',
+    padding: 10,
+    // marginHorizontal: 5,
+    // borderRadius: 10,
+    fontSize: 20,
+  },
+  searchInput: {
+    fontSize: 20,
   },
 });
