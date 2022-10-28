@@ -7,21 +7,24 @@ import useFetch from '../../hooks/useFetch/useFetch';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 import SearchBar from '../../components/SearchBar';
-import Category from '../../components/Category';
 
 const Products = ({navigation}) => {
   //! custom hook created
   const {loading, data, error} = useFetch(Config.API_URL);
   const [newList, setNewList] = useState();
   console.log('render');
-  // console.log(loading, error, data.length, newList);
   console.log('---------------');
+  const [text, setText] = useState('');
 
   useEffect(() => {
     setNewList(data);
   }, [data]);
 
-  const handleSearch = text => {
+  const onChange = value => {
+    setText(value);
+  };
+  // console.log(text);
+  const handleSearch = () => {
     const filteredProducts = data.filter(product => {
       const searchedText = text.toLowerCase();
       const currentTitle = product.title.toLowerCase();
@@ -30,6 +33,11 @@ const Products = ({navigation}) => {
     console.log(filteredProducts);
     setNewList(filteredProducts);
   };
+  useEffect(() => {
+    handleSearch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [text]);
+
   const handleProductSelect = id => {
     navigation.navigate('DetailPage', {id});
   };
@@ -47,9 +55,8 @@ const Products = ({navigation}) => {
   }
   return (
     <View>
-      <SearchBar handleSearch={handleSearch} />
+      <SearchBar onChange={onChange} value={text} setNewList={setNewList} data={data} />
       <FlatList data={newList} renderItem={renderItem} />
-      {/* numColumns={2} may be added */}
     </View>
   );
 };

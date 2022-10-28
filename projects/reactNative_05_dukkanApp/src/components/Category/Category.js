@@ -9,9 +9,29 @@ import Error from '../Error';
 import styles from './Category.style';
 import CategoryCard from './CategoryCard';
 
-const Category = () => {
+const Category = ({setNewList, dataList}) => {
   const {loading, error, data} = useFetch(`${Config.API_URL}/categories`);
   //  console.log(data);
+  const categoryFilter = () => {
+    console.log(data);
+    console.log(dataList);
+
+    switch (data[dataList.category]) {
+      case 'electronics':
+        console.log('deneme');
+        break;
+      case 'jewelery':
+        break;
+      case "men's clothing":
+        break;
+      case "women's clothing":
+        break;
+
+      default:
+        break;
+    }
+  };
+
   if (loading) {
     return <Loading />;
   }
@@ -19,10 +39,17 @@ const Category = () => {
     return <Error />;
   }
   return (
-    <ScrollView style={styles.category_container} horizontal showsHorizontalScrollIndicator={false}>
-      {
-      data.map(category =>  <CategoryCard category={category} key={category.index}/>)
-      }
+    <ScrollView
+      style={styles.category_container}
+      horizontal
+      showsHorizontalScrollIndicator={false}>
+      {data?.map(category => (
+        <CategoryCard
+          category={category}
+          categoryFilter={categoryFilter}
+          key={category}
+        />
+      ))}
     </ScrollView>
   );
 };

@@ -1,12 +1,14 @@
 /* eslint-disable prettier/prettier */
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import React from 'react';
 
-const CategoryCard = ({category}) => {
+const CategoryCard = ({category, categoryFilter}) => {
   return (
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.text}>{category.toUpperCase()}</Text>
-    </TouchableOpacity>
+    <TouchableWithoutFeedback onPress={categoryFilter}>
+      <View style={styles.button}>
+        <Text style={styles.text}>{category.toUpperCase()}</Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 

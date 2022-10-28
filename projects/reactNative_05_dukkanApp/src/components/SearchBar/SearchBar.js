@@ -4,20 +4,18 @@ import React from 'react';
 import styles from './SearchBar.style';
 import Category from '../Category';
 
-const SearchBar = ({handleSearch}) => {
+const SearchBar = ({onChange, value, setNewList, data}) => {
+  console.log(value);
   return (
     <View style={styles.container}>
       <TextInput
         placeholder="Ara.."
-        onChangeText={handleSearch}
+        onChangeText={onChange}
         placeholderTextColor={'white'}
         style={styles.searchInput}
-        // value={value}
+        value={value}
       />
-      <Category />
-      {/* <TouchableOpacity style={styles.button}>
-        <Text style={styles.text}>X</Text>
-      </TouchableOpacity> */}
+      {value ? '' : <Category setNewList={setNewList} dataList={data} />}
     </View>
   );
 };
