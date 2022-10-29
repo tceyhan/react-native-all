@@ -4,8 +4,10 @@
 ![dukkanApp_gif](https://media.giphy.com/media/w3neZ6ZzZdKk7Jcc1i/giphy.gif)
 ![dukkanApp_gif](https://media.giphy.com/media/fpAA4F4A9Bq3pk7Sdn/giphy.gif)
 ## Project Images
-- ![](./media/dukkanApp_image_1.png)
-- ![](./media/dukkanApp_image_2.png)
+![](./media/dukkanApp_image_1.png)
+![](./media/dukkanApp_image_2.png)
+## Project Video
+![](https://github.com/tceyhan/react-native-all/issues/1#issue-1428227837)
 
 
 ## Used skills
