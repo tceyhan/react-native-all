@@ -5,17 +5,17 @@ import styles from './SearchBar.style';
 import Category from '../Category';
 
 const SearchBar = ({onChange, value, setNewList, data}) => {
-  console.log(value);
+  // console.log(value);
   return (
     <View style={styles.container}>
       <TextInput
         placeholder="Ara.."
         onChangeText={onChange}
-        placeholderTextColor={'white'}
+        placeholderTextColor={'whitesmoke'}
         style={styles.searchInput}
         value={value}
       />
-      {value ? '' : <Category setNewList={setNewList} dataList={data} />}
+      {value ? '' : <Category setNewList={setNewList} productList={data} />}
     </View>
   );
 };

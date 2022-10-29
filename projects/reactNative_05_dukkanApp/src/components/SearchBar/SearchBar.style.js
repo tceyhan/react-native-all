@@ -2,14 +2,16 @@
 import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   container: {
-    backgroundColor: '#81b9bf',
+    minHeight:40,
+    // backgroundColor: '#81b9bf',
+    backgroundColor: 'black',
     padding: 5,
-
     flexDirection: 'row',
   },
   searchInput: {
+    marginRight: 10,
     textAlign: 'center',
-    fontSize: 20,
-    color: '#FFFFFF',
+    fontSize: 25,
+    color: '#fff',
   },
 });

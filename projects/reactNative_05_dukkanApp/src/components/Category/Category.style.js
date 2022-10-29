@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   category_container: {
-    padding: 10,
+    paddingVertical: 5,
   },
   button: {
     height: 50,
@@ -17,7 +17,7 @@ export default StyleSheet.create({
   },
   text: {
     textAlign: 'center',
-    color: 'white',
+    color: 'whitesmoke',
     fontWeight: 'bold',
   },
 });
