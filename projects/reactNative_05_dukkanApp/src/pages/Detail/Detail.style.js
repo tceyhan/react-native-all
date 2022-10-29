@@ -7,7 +7,8 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 10,
-    backgroundColor: '#e8f5e9',
+    // backgroundColor: '#e8f5e9',
+    backgroundColor: 'goldenrod',
   },
   image: {
     width: deviceSize.width,

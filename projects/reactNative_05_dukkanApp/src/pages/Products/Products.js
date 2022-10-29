@@ -7,6 +7,7 @@ import useFetch from '../../hooks/useFetch/useFetch';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 import SearchBar from '../../components/SearchBar';
+import styles from './Products.style';
 
 const Products = ({navigation}) => {
   //! custom hook created
@@ -54,7 +55,7 @@ const Products = ({navigation}) => {
     return <Error />;
   }
   return (
-    <View>
+    <View style={styles.container}>
       <SearchBar onChange={onChange} value={text} setNewList={setNewList} data={data} />
       <FlatList data={newList} renderItem={renderItem} />
     </View>

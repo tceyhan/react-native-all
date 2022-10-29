@@ -11,7 +11,13 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: '#c54800',
     borderRadius: 5,
-    backgroundColor: '#e8f5e9',
+    // backgroundColor: '#e8f5e9',
+    // backgroundColor: 'powderblue',
+    // backgroundColor: 'goldenrod',
+    // backgroundColor: 'moccasin',
+    // backgroundColor: 'navajowhite',
+    // backgroundColor: 'salmon',
+    backgroundColor: 'burlywood',
   },
   image: {
     width: 100,
@@ -33,5 +39,6 @@ export default StyleSheet.create({
     textAlign: 'right',
     fontSize: 16,
     fontStyle:'italic',
+    color: 'black',
   },
 });

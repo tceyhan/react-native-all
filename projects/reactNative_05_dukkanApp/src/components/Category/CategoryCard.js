@@ -16,12 +16,12 @@ export default CategoryCard;
 
 const styles = StyleSheet.create({
   button: {
-    height: 50,
+    minHeight: 50,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
     borderWidth: 1,
-    backgroundColor: '#c54800',
+    backgroundColor: '#c54800',    
     borderRadius: 10,
     marginRight: 5,
   },
