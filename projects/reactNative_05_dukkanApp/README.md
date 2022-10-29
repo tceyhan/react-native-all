@@ -1,5 +1,4 @@
 # Project Name : reactNative_05_dukkanApp
-
 ## Projects Gifs
 ![dukkanApp_gif](https://media.giphy.com/media/w3neZ6ZzZdKk7Jcc1i/giphy.gif)
 ![dukkanApp_gif](https://media.giphy.com/media/fpAA4F4A9Bq3pk7Sdn/giphy.gif)
@@ -7,15 +6,12 @@
 ![](./media/dukkanApp_image_1.png)
 ![](./media/dukkanApp_image_2.png)
 ## [Project Video Link](https://github.com/tceyhan/react-native-all/issues/1#issue-1428227837)
-
-
 ## Used skills
 - Custom hooks created named useFetch
 - useState, useEffect
 - fetch data from API with *axios*
 - *ActivityIndicator* for loading while data fetching, and then used [lottie animation package](https://lottiefiles.com/search?q=loading&category=animations&type=free) used
 - destructred method for styles objects
-
 
 ## Used styles and component
 - FlatList component
