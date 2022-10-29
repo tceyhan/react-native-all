@@ -30,7 +30,8 @@
 6. ```npm install react-native-screens react-native-safe-area-context```
 7. **react-native-screens** package requires one additional configuration step to properly work on Android devices. Edit **MainActivity.java** file which is located in *android/app/src/main/java/<your package name>/MainActivity.java.*
 Add the following code to the body of MainActivity class:
-```@Override
+```
+@Override
 protected void onCreate(Bundle savedInstanceState) {
   super.onCreate(null);
 }
