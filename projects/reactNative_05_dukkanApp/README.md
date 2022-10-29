@@ -13,7 +13,7 @@
 - Custom hooks created named useFetch
 - useState, useEffect
 - fetch data from API with *axios*
-- *ActivityIndicator* for loading while data fetching
+- *ActivityIndicator* for loading while data fetching, and then used [lottie animation package](https://lottiefiles.com/search?q=loading&category=animations&type=free) used
 - destructred method for styles objects
 
 
