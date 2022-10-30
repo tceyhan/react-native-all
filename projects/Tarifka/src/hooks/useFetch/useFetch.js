@@ -9,8 +9,8 @@ function useFetch(url) {
 
   const fetchData = async () => {
     try {
-      const {data: resposeData} = await axios.get(url);
-      setData(resposeData);
+      const {data: responseData} = await axios.get(url);
+      setData(responseData);
       setLoading(false);
     } catch (err) {
       setError(err.message);
