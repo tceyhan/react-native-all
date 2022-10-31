@@ -3,9 +3,10 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   container: {
     display: 'flex',
-    backgroundColor: 'gainsboro',
+    backgroundColor: '#ECEFF1',
     margin: 5,
-    paddingLeft: 10,
+    paddingLeft: 5,
+    borderWidth: 1,
     borderRadius: 10,
     borderTopLeftRadius: 50,
     borderBottomLeftRadius: 50,
@@ -14,7 +15,7 @@ export default StyleSheet.create({
   },
   text: {color: 'black', fontSize: 25},
   image: {
-    backgroundColor: 'gainsboro',
+    backgroundColor: '#ECEFF1',
     width: 120,
     height: 120,
     marginRight: 10,

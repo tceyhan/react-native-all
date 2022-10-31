@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Category from './pages/Category';
-// import MealList from './pages/MealList';
+import MealList from './pages/MealList';
 // import Detail from './pages/Detail';
 
 const Stack = createNativeStackNavigator();
@@ -27,7 +27,20 @@ const Router = () => {
             headerTitleAlign: 'center',
           }}
         />
-        {/* <Stack.Screen name="MealPage" component={MealList} /> */}
+        <Stack.Screen
+          name="MealPage"
+          component={MealList}
+          options={{
+            title: 'Meals',
+            headerStyle: {backgroundColor: 'white'},
+            headerTitleStyle: {
+              color: 'orange',
+              fontWeight: 'bold',
+              fontSize: 25,
+            },
+            headerTitleAlign: 'center',
+          }}
+        />
         {/* <Stack.Screen name="DetailPage" component={Detail} /> */}
       </Stack.Navigator>
     </NavigationContainer>
