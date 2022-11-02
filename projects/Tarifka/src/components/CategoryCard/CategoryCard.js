@@ -1,8 +1,9 @@
 import {Image, Text, TouchableWithoutFeedback, View} from 'react-native';
 import React from 'react';
-
 import styles from './CategoryCard.style';
+
 const CategoryCard = ({item, categorySelected}) => {
+
   return (
     <TouchableWithoutFeedback
       onPress={() => categorySelected(item.strCategory)}>

@@ -1,4 +1,3 @@
-
 import {View, FlatList} from 'react-native';
 import React from 'react';
 
@@ -17,10 +16,7 @@ const Category = ({navigation}) => {
     navigation.navigate('MealPage', {strCategory});
   };
   const renderCategory = ({item}) => (
-    <CategoryCard
-      item={item}
-      categorySelected={categorySelected}
-    />
+    <CategoryCard item={item} categorySelected={categorySelected} />
   );
 
   if (loading) {

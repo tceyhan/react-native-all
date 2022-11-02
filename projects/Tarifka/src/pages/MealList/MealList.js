@@ -7,13 +7,17 @@ import Error from '../../components/Error';
 import MealCard from '../../components/MealCard';
 import styles from './MealList.style';
 
-const MealList = ({route}) => {
+const MealList = ({route, navigation}) => {
   const {strCategory} = route.params;
   // console.log(strCategory);
   const {data, loading, error} = useFetch(`${Config.API_MEALS}${strCategory}`);
   console.log(data);
 
-  const renderMeals = ({item}) => <MealCard item={item} />;
+  const handleMealSelect = (idMeal) => {
+    navigation.navigate('DetailPage', {idMeal});
+  };
+
+  const renderMeals = ({item}) => <MealCard item={item} onSelectMeal={() => handleMealSelect(item.idMeal)}/>;
 
   if (loading) {
     return <Loading />;
