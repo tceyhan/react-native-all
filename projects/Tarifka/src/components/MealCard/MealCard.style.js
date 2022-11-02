@@ -1,6 +1,5 @@
 import {Dimensions, StyleSheet} from 'react-native';
 
-const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
@@ -8,11 +7,24 @@ export default StyleSheet.create({
     flex: 1,
     margin: 10,
     borderRadius: 10,
+    height: windowHeight / 4,
   },
   image: {
     borderRadius: 10,
-    width: windowWidth,
-    height: windowHeight / 4,
+    width: '100%',
+    height: '100%',
   },
-  name: {},
+  title_container: {
+    width: '100%',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+    marginTop:-25,
+    alignItems: 'center',
+  },
+  title: {
+    fontweight: 'bold',
+    fontSize: 18,
+    color: 'white',
+  },
 });
