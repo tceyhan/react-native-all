@@ -1,11 +1,11 @@
-import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
+import {View, Text, Image, ScrollView, TouchableOpacity, Linking} from 'react-native';
 import React from 'react';
 import styles from './DetailCard.style';
 
 
-const DetailCard = ({item}) => {
-    
+const DetailCard = ({item,handleYoutube}) => {
     console.log(item);
+    
   return (
 <ScrollView>
     <View style={styles.container}>
@@ -16,7 +16,7 @@ const DetailCard = ({item}) => {
         </View>
         <View style={styles.seperator} />
         <Text style={styles.desc}>{item.strInstructions}</Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handleYoutube}>
             <Text style={styles.button_text}>Watch on Youtube</Text>
         </TouchableOpacity>
     </View> 
