@@ -29,6 +29,7 @@ export default StyleSheet.create({
   desc: {
     paddingLeft: 5,
     fontSize: 16,
+    color:'black',
   },
   button: {
     marginHorizontal: 10,

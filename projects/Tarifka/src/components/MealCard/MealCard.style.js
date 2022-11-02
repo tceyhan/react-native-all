@@ -6,6 +6,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     margin: 10,
+    marginBottom: 20,
     borderRadius: 10,
     height: windowHeight / 4,
   },
@@ -19,12 +20,13 @@ export default StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.5)',
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
-    marginTop:-25,
+    marginTop:-20,
     alignItems: 'center',
   },
   title: {
     fontweight: 'bold',
-    fontSize: 18,
+    fontSize: 20,
     color: 'white',
+    paddingVertical: 5,
   },
 });
