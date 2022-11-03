@@ -5,8 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Category from './pages/Category';
 import MealList from './pages/MealList';
-import Detail from './pages/Detail/Detail';
-// import Detail from './pages/Detail';
+import Detail from './pages/Detail';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,7 +41,10 @@ const Router = () => {
             headerTitleAlign: 'center',
           }}
         />
-        <Stack.Screen name="DetailPage" component={Detail} options={{
+        <Stack.Screen
+          name="DetailPage"
+          component={Detail}
+          options={{
             title: 'Detail',
             headerStyle: {backgroundColor: 'white'},
             headerTitleStyle: {
@@ -51,7 +53,8 @@ const Router = () => {
               fontSize: 25,
             },
             headerTitleAlign: 'center',
-          }}/>
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

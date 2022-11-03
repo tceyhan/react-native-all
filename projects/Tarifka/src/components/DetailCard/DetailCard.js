@@ -4,7 +4,7 @@ import styles from './DetailCard.style';
 
 
 const DetailCard = ({item,handleYoutube}) => {
-    console.log(item);
+    // console.log(item);
     
   return (
 <ScrollView>

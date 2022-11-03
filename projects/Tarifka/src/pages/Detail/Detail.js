@@ -1,4 +1,4 @@
-import {View, Text, FlatList, Linking, Alert} from 'react-native';
+import {View,FlatList, Linking, Alert} from 'react-native';
 import React from 'react';
 import useFetch from '../../hooks/useFetch';
 import Config from 'react-native-config';
