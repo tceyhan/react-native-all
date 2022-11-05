@@ -1,31 +1,47 @@
 /* eslint-disable prettier/prettier */
-import {View, Image} from 'react-native';
+import {View, Image, Alert} from 'react-native';
 import React from 'react';
 import styles from './Login.style';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import Errors from '../../components/YupErrors';
 import {Formik} from 'formik';
-
-
+import usePost from '../../hooks/usePost';
+import Config from 'react-native-config';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import * as Yup from 'yup';
-
 const LoginSchema = Yup.object().shape({
   username: Yup.string()
-    .min(3, 'Too Short!')
-    .max(20, 'Too Long!')
+    .min(3, 'Too Short! username must to contain at least 3 characters')
+    .max(20, 'Too Long! username must tı contain at most 20 characters')
     .required('Required'),
   password: Yup.string()
-    .min(4, 'Too Short!')
-    .max(15, 'Too Long!')
+    .min(4, 'Too Short! password must to contain at least 4 characters')
+    .max(15, 'Too Long! password must to contain at most 15 characters')
     .required('Required'),
 });
 
-const Login = () => {
+const Login = ({navigation}) => {
+ 
+  const {loading, error, data, post} = usePost();
+
   function handleLogin(values) {
-    console.log(values);
+    post(Config.API_AUTH_URL + '/login', values);
+    // console.log(values);
   }
+  if (error) {
+    return Alert.error('dükkanApp', 'Bir hata oluştu!');
+  }
+  if (data) {
+    if (data.status === 'Error') {
+      return Alert.alert('dükkanApp', 'Kullanıcı bulunamadı!');
+    } else {
+      AsyncStorage.setItem('@USER', JSON.stringify(user));
+      return navigation.navigate('ProductsPage');
+    }
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.logo_container}>
@@ -46,9 +62,7 @@ const Login = () => {
               onType={handleChange('username')}
               iconName="account"
             />
-            {errors.username ? (
-             <Errors value={errors.username} />) : null
-            }
+            {errors.username ? <Errors value={errors.username} /> : null}
             <Input
               placeholder="Şifrenizi giriniz.."
               value={values.password}
@@ -56,10 +70,8 @@ const Login = () => {
               iconName="key"
               isSecure
             />
-            {errors.password ? (
-             <Errors value={errors.password} />) : null
-            }
-            <Button text="Giriş Yap" onPress={handleSubmit} />
+            {errors.password ? <Errors value={errors.password} /> : null}
+            <Button text="Giriş Yap" onPress={handleSubmit} loading={loading} />
           </View>
         )}
       </Formik>

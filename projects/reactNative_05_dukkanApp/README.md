@@ -3,7 +3,7 @@
 ![dukkanApp_gif](https://media.giphy.com/media/w3neZ6ZzZdKk7Jcc1i/giphy.gif)
 ![dukkanApp_gif](https://media.giphy.com/media/fpAA4F4A9Bq3pk7Sdn/giphy.gif)
 ## Project Images
-![](./media/login_page_yup.png)
+![](./media/login_page_yup.png) ![](./media/login_page_formik_yup_validation.png)
 ![](./media/dukkanApp_image_1.png)
 ![](./media/dukkanApp_image_2.png)
 ## [Project Video Link](https://github.com/tceyhan/react-native-all/issues/1#issue-1428227837)
@@ -108,6 +108,9 @@ apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.grad
 - [react-native-icons](https://github.com/oblador/react-native-vector-icons#installation)
 - android/src/assets/fonts created for icons
 - [icons download](https://materialdesignicons.com/) and added above *fonts* folder ![](./media/font_folder_image.png)
--
+-  usePost custom hook created for users login process
+- [](https://react-native-async-storage.github.io/async-storage/docs/install/)
+- `npm install @react-native-async-storage/async-storage` for access phone storage
+- `npm i redux react-redux` for user login process
 
 - *hata aldığımızda bir kere çalıştır "cd android && ./gradlew clean && cd .."*
