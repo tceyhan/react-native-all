@@ -85,3 +85,5 @@ apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.grad
 ```
 14. for animation loading, error etc.
  ```npm i lottie-react-native```
+
+## hata aldığımızda bir kere çalıştır "cd andorid && ./gradlew clean && cd .."
