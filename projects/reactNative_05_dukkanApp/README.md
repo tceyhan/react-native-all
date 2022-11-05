@@ -90,3 +90,5 @@ apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.grad
 ## formik eklendi
 ## yup eklendi
 ## react-native-icons eklendi.
+## ıcon eklendi inputlara
+## folder açıldı android/src/assets/fonts klasörüne
