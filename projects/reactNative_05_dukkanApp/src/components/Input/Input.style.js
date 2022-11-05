@@ -6,6 +6,10 @@ export default StyleSheet.create({
         padding: 5,
         margin: 10,
         backgroundColor:'white',
-        borderRadius:10
+        borderRadius:10,
+        flexDirection: 'row',
+},
+input:{
+    flex: 1,
 },
 });

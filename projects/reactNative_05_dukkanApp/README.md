@@ -87,3 +87,6 @@ apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.grad
  ```npm i lottie-react-native```
 
 ## hata aldığımızda bir kere çalıştır "cd andorid && ./gradlew clean && cd .."
+## formik eklendi
+## yup eklendi
+## react-native-icons eklendi.

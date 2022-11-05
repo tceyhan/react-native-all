@@ -84,6 +84,7 @@ project.ext.vectoricons = [
 ]
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
 project.ext.react = [
     enableHermes: true,  // clean and rebuild if changing
 ]

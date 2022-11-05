@@ -7,6 +7,8 @@ import Button from '../../components/Button';
 import Errors from '../../components/YupErrors';
 import {Formik} from 'formik';
 
+
+
 import * as Yup from 'yup';
 
 const LoginSchema = Yup.object().shape({
@@ -42,6 +44,7 @@ const Login = () => {
               placeholder="Kullanıcı adını giriniz.."
               value={values.username}
               onType={handleChange('username')}
+              iconName="account"
             />
             {errors.username ? (
              <Errors value={errors.username} />) : null
@@ -50,6 +53,8 @@ const Login = () => {
               placeholder="Şifrenizi giriniz.."
               value={values.password}
               onType={handleChange('password')}
+              iconName="key"
+              isSecure
             />
             {errors.password ? (
              <Errors value={errors.password} />) : null
