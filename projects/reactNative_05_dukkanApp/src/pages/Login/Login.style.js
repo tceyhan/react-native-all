@@ -15,10 +15,11 @@ export default StyleSheet.create({
     height: Dimensions.get('window').height / 3,
     resizeMode: 'contain',
     alignSelf: 'center',
-    tintColor: 'whitegrey',
+    tintColor: 'white',
     // png formatındaki yerlere tintColor atayabiliyoruz.
   },
   body_container: {
     flex: 1,
   },
+ 
 });
