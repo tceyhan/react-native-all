@@ -3,6 +3,7 @@
 ![dukkanApp_gif](https://media.giphy.com/media/w3neZ6ZzZdKk7Jcc1i/giphy.gif)
 ![dukkanApp_gif](https://media.giphy.com/media/fpAA4F4A9Bq3pk7Sdn/giphy.gif)
 ## Project Images
+![](./media/login_page_yup.png)
 ![](./media/dukkanApp_image_1.png)
 ![](./media/dukkanApp_image_2.png)
 ## [Project Video Link](https://github.com/tceyhan/react-native-all/issues/1#issue-1428227837)
@@ -16,6 +17,7 @@
 ## Used styles and component
 - FlatList component
 - resizeMode used in Image component
+- Dimensions used in Image component style
 - [lottie package for animation](https://www.npmjs.com/package/lottie-react-native)
 - headerTintColor, headerStyle,headerTitleStyle,headerTitleAlign properties used in Stack.Screen options object
 
@@ -44,6 +46,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Products from './src/pages/Products;
 import Products from './src/pages/Details;
+import Login from './src/pages/Login;
 ```
 11.
 ```
@@ -53,6 +56,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="LoginPage" component={Login} />
         <Stack.Screen name="ProductsPage" component={Products} />
         <Stack.Screen name="DetailPage" component={Detail} />
       </Stack.Navigator>
@@ -86,9 +90,24 @@ apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.grad
 14. for animation loading, error etc.
  ```npm i lottie-react-native```
 
-## hata aldığımızda bir kere çalıştır "cd andorid && ./gradlew clean && cd .."
-## formik eklendi
-## yup eklendi
-## react-native-icons eklendi.
-## ıcon eklendi inputlara
-## folder açıldı android/src/assets/fonts klasörüne
+## Login Page desing
+- static image dosyaları için source kısmına uri değilde require metodu kullanmak gerekiyor (src klasörü altında assets klasörü oluşturmuştuk daha önce oraya googledan bir png arka tarafı şeffaf olan icon aratırız uygulamamızın içeriğine özel onu bu klasöre kopyalaıyoruz)
+- 
+```
+<Image
+          style={styles.logo}
+          source={require('../../assets/login_logo.png')}
+        />
+``` 
+- Input ve button components created and added in Login Page
+- `npm install formik --save` for [Formik ](https://formik.org/docs/overview)
+- import Login Page and ` import { Formik } from 'formik';`
+- [setting for React native ](https://formik.org/docs/guides/react-native)
+- [Yup install](https://blog.logrocket.com/react-native-form-validations-with-formik-and-yup/) for form validation in react native 
+- Errors component created for *Yup*
+- [react-native-icons](https://github.com/oblador/react-native-vector-icons#installation)
+- android/src/assets/fonts created for icons
+- [icons download](https://materialdesignicons.com/) and added above *fonts* folder ![](./media/font_folder_image.png)
+-
+
+- *hata aldığımızda bir kere çalıştır "cd android && ./gradlew clean && cd .."*
