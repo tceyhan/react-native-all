@@ -22,7 +22,7 @@ const LoginSchema = Yup.object().shape({
     .required('Required'),
 });
 
-const Login = ({navigation}) => {
+const Login = () => {
   const dispatch = useDispatch();
   const {loading, error, data, post} = usePost();
 
