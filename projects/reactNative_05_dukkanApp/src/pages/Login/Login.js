@@ -8,7 +8,7 @@ import Errors from '../../components/YupErrors';
 import {Formik} from 'formik';
 import usePost from '../../hooks/usePost';
 import Config from 'react-native-config';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useDispatch} from 'react-redux';
 
 import * as Yup from 'yup';
 const LoginSchema = Yup.object().shape({
@@ -23,7 +23,7 @@ const LoginSchema = Yup.object().shape({
 });
 
 const Login = ({navigation}) => {
- 
+  const dispatch = useDispatch();
   const {loading, error, data, post} = usePost();
 
   function handleLogin(values) {
@@ -31,14 +31,13 @@ const Login = ({navigation}) => {
     // console.log(values);
   }
   if (error) {
-    return Alert.error('dükkanApp', 'Bir hata oluştu!');
+    Alert.alert('dükkanApp', 'Bir hata oluştu!');
   }
   if (data) {
     if (data.status === 'Error') {
       return Alert.alert('dükkanApp', 'Kullanıcı bulunamadı!');
     } else {
-      AsyncStorage.setItem('@USER', JSON.stringify(user));
-      return navigation.navigate('ProductsPage');
+      dispatch({type: 'SET_USER', payload: {user}});
     }
   }
 
@@ -80,3 +79,25 @@ const Login = ({navigation}) => {
 };
 
 export default Login;
+
+const user = {
+  id: 1,
+  email: 'John@gmail.com',
+  username: 'johnd',
+  password: 'm38rmF$',
+  name: {
+    firstname: 'John',
+    lastname: 'Doe',
+  },
+  address: {
+    city: 'kilcoole',
+    street: '7835 new road',
+    number: 3,
+    zipcode: '12926-3874',
+    geolocation: {
+      lat: '-37.3159',
+      long: '81.1496',
+    },
+  },
+  phone: '1-570-236-7033',
+};

@@ -9,7 +9,7 @@ const Input = ({placeholder, onType, value, iconName, isSecure}) => {
   return (
     <View style={styles.container}>
       <TextInput style={styles.input} placeholder={placeholder} onChangeText={onType} value={value} secureTextEntry={isSecure} />
-      <Icon name={iconName} size={35} color="orange"/>
+      <Icon name={iconName} size={35} color="lightgray"/>
     </View>
   );
 };

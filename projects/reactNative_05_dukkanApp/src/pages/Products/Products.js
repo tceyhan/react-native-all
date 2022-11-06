@@ -56,12 +56,15 @@ const Products = ({navigation}) => {
   }
   return (
     <View style={styles.container}>
-      <SearchBar onChange={onChange} value={text} setNewList={setNewList} data={data} />
+      <SearchBar
+        onChange={onChange}
+        value={text}
+        setNewList={setNewList}
+        data={data}
+      />
       <FlatList data={newList} renderItem={renderItem} />
     </View>
   );
 };
 
 export default Products;
-
-
