@@ -1,16 +1,16 @@
 # Project Name : jobfind
 ## Proje Tanımı:
-#### Kullanıcıların sektördeki işleri görüntüleyebileceği, iş detaylarına bakabileceği, isterse favorilerine atabileceği/varolanları kaldırabileceği, isterse iş başvurusunda bulunabileceği bir uygulama.
+#### Kullanıcıların sektördeki işleri görüntüleyebileceği, iş detaylarına bakabileceği, isterse favorilerine atabileceği/varolanları kaldırabileceği, isterse iş başvurusunda bulunabileceği veya başvurduğu işten vazgeçebileceği mobil bir uygulama.
 
 ## GEREKSİNİMLER:
 - Kullancılar sisteme kayıt olabilecek
 - Kullanıcılar sisteme giriş yapabilecek
 - Kullanıcılar işleri görüntüleyebilecek
 - Kullancılar iş detaylarına bakabilecek
-- Kullanıcılar isterse favorilere atabilecek
+- Kullanıcılar isterlerse favorilere atabilecek
 - Kullanıcılar favorilerinde varolan işleri kaldırabilecek
 - Kullanıcılar iş başvurusunda bulunabilecek
-
+- Kullanıcılar başvurduğu işten vazgeçebilecek
 ## AKTÖRLER VE AKSİYONLAR
 
 ### KULLANICI
@@ -21,7 +21,7 @@
  * İşleri favoriye atabilme
  * Favorideki işleri kaldırabilme
  * İşlere başvuru yapabilme
-
+ * Başvuru yapılmış iş başvurusundan vazgeçebilme
 ## ADIM ADIM GÖSTERİM
 
 #### 1) Kayıt Oluşturma
@@ -108,7 +108,7 @@ Tanım: Kullanıcı favorilerinde kayıtlı bir işi favorilerinden kaldırır.
 | Olumlu Durum  |
 | ---------- |
 | 1. Kullanıcı favori butonuna tıklar  |
-| 2. Kullanıcının favoridem kaldırma isteği sisteme gönderilir. |
+| 2. Kullanıcının favoriden kaldırma isteği sisteme gönderilir. |
 | 3. Sistemden olumlu cevap alınır. |
 | 4. Favori butonunun tasarımı güncellenir. |
 
@@ -117,10 +117,19 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 
 | Olumlu Durum  |
 | ---------- |
-| 1. Kullanıcı işe başvur butonuna tıklar  |
+| 1. Kullanıcı İşe Başvur butonuna tıklar  |
 | 2. Kullanıcının işe başvurma isteği sisteme gönderilir. |
 | 3. Sistemden olumlu cevap alınır. |
-| 4. İşe Başvur butonunun tasarımı güncellenir. |
+| 4. İşe Başvur butonunun ismi Vazgeç olarak yapılır ve tasarımı güncellenir. |
+#### 8) Başvurulan işten vazgeçme
+Tanım: Kullanıcı başvurduğu işten geri çekilir.
+
+| Olumlu Durum  |
+| ---------- |
+| 1. Kullanıcı Vazgeç butonuna tıklar  |
+| 2. Kullanıcının geri çekilme isteği sisteme gönderilir. |
+| 3. Sistemden olumlu cevap alınır. |
+| 4. Vazgeç butonunun ismi İşe Başvur yapılır ve tasarımı güncellenir. |
 <!-- ## EKRAN TASARIMLARI -->
 
 
