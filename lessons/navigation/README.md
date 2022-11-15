@@ -17,12 +17,13 @@ protected void onCreate(Bundle savedInstanceState) {
   super.onCreate(null);
 }
 ```
-5. aynı dosya içerisinde en üstte yer alan importlar kısmına ```import android.os.Bundle;``` dahil ediyoruz.
+5. aynı dosya içerisinde en üstte yer alan importlar kısmına `import android.os.Bundle;` dahil ediyoruz.
 
 artık navigation için paketlerimiz hazır hale getirildi.
 
 6. index.js veya App.js içerisinde giderek.
-```import * as React from 'react';
+```
+import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
@@ -32,9 +33,11 @@ export default function App() {
 }
 ```
 7. Stack navigation için yani sayfalar arasında geçiş yapmak için ;
-```npm install @react-navigation/native-stack``` install ediyoruz.
+`npm install @react-navigation/native-stack` install ediyoruz.
 
-8. ```import * as React from 'react';
+8. 
+```
+import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
