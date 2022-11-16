@@ -1,6 +1,6 @@
 const initialState = {};
 
-export default jobReducer = (state = initialState, {type, payload}) => {
+const jobReducer = (state = initialState, {type, payload}) => {
   switch (type) {
     case typeName:
       return {...state, ...payload};
@@ -9,3 +9,5 @@ export default jobReducer = (state = initialState, {type, payload}) => {
       return state;
   }
 };
+
+export default jobReducer;

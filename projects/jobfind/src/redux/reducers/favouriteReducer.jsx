@@ -2,7 +2,7 @@ const initialState = {
 
 }
 
-export default favouriteReducer = (state = initialState, { type, payload }) => {
+const favouriteReducer = (state = initialState, { type, payload }) => {
   switch (type) {
 
   case typeName:
@@ -12,3 +12,4 @@ export default favouriteReducer = (state = initialState, { type, payload }) => {
     return state
   }
 }
+ export default favouriteReducer;
