@@ -152,6 +152,9 @@ Config.GOOGLE_MAPS_API_KEY; // 'abcdefgh'
 - redux javascript için geliştirilmiş bir state yönetim aracıdır.
 - bir komponentin verilen girdisi ile çıktısı tahmin edilebilir ise redux kullanmılladır.aynı girdilere aynı çıktılar varsa kullanılır.
 - react-redux ise component mantığı için lazımdır.
+- [redux devTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) extension kullanımı her zaman kolaylık sağlar.
+
+- redux store'a devtools eklemek eklenir enhancer olarak.[link](https://www.npmjs.com/package/@redux-devtools/extension)
 
 ### React Navigation
 - `npm install @react-navigation/native`
