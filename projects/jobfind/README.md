@@ -132,6 +132,40 @@ Tanım: Kullanıcı başvurduğu işten geri çekilir.
 | 4. Vazgeç butonunun ismi İşe Başvur yapılır ve tasarımı güncellenir. |
 <!-- ## EKRAN TASARIMLARI -->
 
+### React-native-config
+- `npm i react-native-config`
+-  Proje kök klasör dizininde olacak şekilde .env adında yeni bir dosya oluşturuyoruz. içeriği şu örnekteki gibi olabilir.
+```
+API_URL=https://myapi.com
+GOOGLE_MAPS_API_KEY=abcdefgh
+```
+- android/app/build.gradle dosya içerisine 2.satıra bu kodu ekliyoruz.
+`apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"`
+- Component içerisinde kullanımı =>
+```
+import Config from "react-native-config";
+
+Config.API_URL; // 'https://myapi.com'
+Config.GOOGLE_MAPS_API_KEY; // 'abcdefgh'
+```
+### Redux
+- redux javascript için geliştirilmiş bir state yönetim aracıdır.
+- bir komponentin verilen girdisi ile çıktısı tahmin edilebilir ise redux kullanmılladır.aynı girdilere aynı çıktılar varsa kullanılır.
+- react-redux ise component mantığı için lazımdır.
+
+### React Navigation
+- `npm install @react-navigation/native`
+- `npm install react-native-screens react-native-safe-area-context`
+- android/app/src/main/java/<your package name>/MainActivity.java
+Add the following code to the body of MainActivity class:
+```
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(null);
+}
+```
+and make sure to add the following import statement at the top of this file below your package statement:
+`import android.os.Bundle;`
 
 
 
