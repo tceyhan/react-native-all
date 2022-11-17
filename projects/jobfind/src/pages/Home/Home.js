@@ -7,7 +7,7 @@ import styles from './Home.style';
 import JobCard from '../../components/JobCard';
 import Button from '../../components/Button';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [page, setPage] = useState(1);
   const {data, error, loading} = useFetch(`${Config.API_URL}?page=${page}`);
   console.log(data.results);
@@ -28,12 +28,15 @@ const Home = () => {
       </View>
     );
   };
- const renderJob = ({item}) => <JobCard item={item} />;
+ const handleDetail = (id) =>{
+  navigation.navigate('Detail', {id});
+ }
+ const renderJob = ({item}) => <JobCard item={item} onDetail = {() => handleDetail(item.id)} />;
   return (
     <View>
       <FlatList
        data={data.results}
-      //  keyExtractor={({item})=>item[item.index]}
+       keyExtractor={(item)=>item.id}
        renderItem={renderJob}
        ListFooterComponent={Pagination}
 
