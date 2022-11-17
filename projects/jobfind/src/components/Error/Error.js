@@ -5,7 +5,7 @@ import Lottie from 'lottie-react-native';
 
 const Error = () => {
   return (
-    <Lottie source={require('../../assets/error.json')} autoPlay loop />
+    <Lottie source={require('../../assets/127164-404-error.json')} autoPlay loop />
   );
 };
 

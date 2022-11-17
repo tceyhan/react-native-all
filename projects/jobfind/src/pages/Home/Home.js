@@ -8,11 +8,21 @@ import JobCard from '../../components/JobCard';
 import Button from '../../components/Button';
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import styles from './Home.style';
+import Error from '../../components/Error';
+import Loading from '../../components/Loading';
 
 const Home = ({navigation}) => {
   const [page, setPage] = useState(0);
   const {data, error, loading} = useFetch(`${Config.API_URL}?page=${page}`);
   console.log(data.results);
+
+  if (error) {
+    return <Error />;
+  }
+
+  if (loading) {
+    return <Loading />;
+  }
 
   const Pagination = () => {
     const totalPage = Math.floor(data.page_count / 20);
@@ -20,11 +30,11 @@ const Home = ({navigation}) => {
       return setPage(page + 1);
     };
     const decreasePage = () => {
-      return page === 0 ? page : setPage(page - 1);
+      return page === 0 ? setPage(0) : setPage(page - 1);
     };
     return (
       <View style={styles.pagination_container}>
-        {page > 1 && <Icon name="chevron-left" size={30} color="#005ac1" onPress={decreasePage} />}
+        {page > 0 && <Icon name="chevron-left" size={30} color="#005ac1" onPress={decreasePage} />}
         <Button style={styles.button} text="Previous" onPress={decreasePage} />
         <View style={styles.page_container}>
           <Text style={styles.page}>

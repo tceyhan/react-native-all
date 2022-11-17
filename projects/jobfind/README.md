@@ -199,3 +199,9 @@ and make sure to add the following import statement at the top of this file belo
 
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons#android)
 - [MaterialCommunityIcons](https://materialdesignicons.com/)
+
+
+### Lottie (error and loading)
+
+- [Lottie döküman](https://www.npmjs.com/package/lottie-react-native)
+- `npm i lottie-react-native`

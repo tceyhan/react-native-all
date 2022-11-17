@@ -1,11 +1,26 @@
 /* eslint-disable prettier/prettier */
-import {View, Text} from 'react-native';
 import React from 'react';
+import {View} from 'react-native';
+import Config from 'react-native-config';
+import Error from '../../components/Error';
+import Loading from '../../components/Loading';
+import useFetch from '../../hooks/useFetch';
+import DetailCard from '../../components/DetailCard';
 
-const Detail = () => {
+const Detail = ({route}) => {
+  const {id} = route.params;
+  const {loading, error, data} = useFetch(`${Config.API_URL}/${id}`);
+
+  if (loading) {
+    return <Loading />;
+  }
+  if (error) {
+    return <Error />;
+  }
+
   return (
     <View>
-      <Text>Detail</Text>
+      <DetailCard detail={data} />
     </View>
   );
 };
