@@ -20,11 +20,11 @@ const Home = ({navigation}) => {
       return setPage(page + 1);
     };
     const decreasePage = () => {
-      return page === 1 ? setPage(1) : setPage(page - 1);
+      return page === 0 ? page : setPage(page - 1);
     };
     return (
-      <View style={styles.container}>
-        {page > 1 && <Icon name="chevron-left" size={30} onPress={decreasePage} />}
+      <View style={styles.pagination_container}>
+        {page > 1 && <Icon name="chevron-left" size={30} color="#005ac1" onPress={decreasePage} />}
         <Button style={styles.button} text="Previous" onPress={decreasePage} />
         <View style={styles.page_container}>
           <Text style={styles.page}>
@@ -32,7 +32,7 @@ const Home = ({navigation}) => {
           </Text>
         </View>
         <Button style={styles.button} text="Next" onPress={increasePage} />
-        {page !== totalPage && <Icon name="chevron-right" size={30} onPress={increasePage} />}
+        {page !== totalPage && <Icon name="chevron-right" size={30} color="#005ac1" onPress={increasePage} />}
       </View>
     );
   };
