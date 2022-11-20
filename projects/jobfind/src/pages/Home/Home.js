@@ -1,15 +1,13 @@
 /* eslint-disable prettier/prettier */
-import {View, Text, FlatList} from 'react-native';
+import {View, FlatList} from 'react-native';
 import React, {useState} from 'react';
 import useFetch from '../../hooks/useFetch';
 import Config from 'react-native-config';
 
 import JobCard from '../../components/JobCard';
-import Button from '../../components/Button';
-import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
-import styles from './Home.style';
 import Error from '../../components/Error';
 import Loading from '../../components/Loading';
+import Pagination from '../../components/Pagination';
 
 const Home = ({navigation}) => {
   const [page, setPage] = useState(0);
@@ -24,28 +22,7 @@ const Home = ({navigation}) => {
     return <Loading />;
   }
 
-  const Pagination = () => {
-    const totalPage = Math.floor(data.page_count / 20);
-    const increasePage = () => {
-      return setPage(page + 1);
-    };
-    const decreasePage = () => {
-      return page === 0 ? setPage(0) : setPage(page - 1);
-    };
-    return (
-      <View style={styles.pagination_container}>
-        {page > 0 && <Icon name="chevron-left" size={30} color="#005ac1" onPress={decreasePage} />}
-        <Button style={styles.button} text="Previous" onPress={decreasePage} />
-        <View style={styles.page_container}>
-          <Text style={styles.page}>
-            {page + 1 } / {totalPage}
-          </Text>
-        </View>
-        <Button style={styles.button} text="Next" onPress={increasePage} />
-        {page !== totalPage && <Icon name="chevron-right" size={30} color="#005ac1" onPress={increasePage} />}
-      </View>
-    );
-  };
+
   const handleDetail = id => {
     navigation.navigate('Detail', {id});
   };
@@ -58,7 +35,7 @@ const Home = ({navigation}) => {
         data={data.results}
         keyExtractor={item => item.id}
         renderItem={renderJob}
-        ListFooterComponent={Pagination}
+        ListFooterComponent={<Pagination page={page} setPage={setPage} data={data} />}
       />
     </View>
   );

@@ -1,17 +1,19 @@
 /* eslint-disable prettier/prettier */
-import {View, Text} from 'react-native';
 import React from 'react';
+import {View, Text, TouchableWithoutFeedback} from 'react-native';
 import styles from './JobCard.style';
 
 const JobCard = ({item, onDetail}) => {
   console.log(item);
   return (
-    <View style={styles.container}>
-      <Text>{item.name}</Text>
-      <Text>{item.locations[0].name}</Text>
-      <Text>{item.levels[0].name}</Text>
-      <Text>{item.company.name}</Text>
-    </View>
+    <TouchableWithoutFeedback onPress={onDetail}>
+      <View  style={styles.container}>
+        <Text style={styles.name}>{item.name.slice(0,40) + '...'}</Text>
+        <Text style={styles.company_name}>{item.company.name}</Text>
+        <Text style={styles.location}>{item.locations[0].name}</Text>
+        <Text style={styles.level}>{item.levels[0].name}</Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 
