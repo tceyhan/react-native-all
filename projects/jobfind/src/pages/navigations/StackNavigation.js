@@ -31,7 +31,7 @@ const StackNavigation = () => {
           title: 'Job Detail',
           headerStyle: {backgroundColor: 'white'},
           headerTitleStyle: {
-            color: 'purple',
+            color: '#c55',
             fontWeight: 'bold',
             fontSize: 25,
           },

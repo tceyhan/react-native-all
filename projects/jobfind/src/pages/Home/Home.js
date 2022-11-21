@@ -23,7 +23,7 @@ const Home = ({navigation}) => {
   }
 
 
-  const handleDetail = id => {
+  const handleDetail = (id) => {
     navigation.navigate('Detail', {id});
   };
   const renderJob = ({item}) => (
