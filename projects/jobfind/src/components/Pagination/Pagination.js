@@ -20,6 +20,7 @@ const Pagination = ({page, setPage, data}) => {
         onPress={decreasePage}
         IconName="chevron-left"
         IconColor="white"
+        IconLeft
       />
       <View style={styles.page_container}>
         <Text style={styles.page}>

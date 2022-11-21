@@ -31,12 +31,14 @@ const DetailCard = ({data}) => {
           text="Submit"
           IconName="logout"
           IconColor="white"
+          IconLeft
         />
         <Button
           style={styles.button}
           text="Favorite Job"
           IconName="heart-outline"
           IconColor="white"
+          IconLeft
         />
       </View>
     </ScrollView>
