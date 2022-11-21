@@ -9,22 +9,14 @@ export default StyleSheet.create({
     marginVertical:5,
   },
   page_container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 5,
+    padding: 8,
     marginHorizontal: 10,
     backgroundColor: '#c77',
     borderRadius: 10,
   },
   page: {
-    alignSelf: 'left',
     fontWeight: 'bold',
     fontSize: 17,
     color: 'white',
-  },
-  picker: {
-    // alignSelf: 'right',
-    marginLeft:100,
   },
 });

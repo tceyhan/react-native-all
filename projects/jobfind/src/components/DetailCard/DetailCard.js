@@ -6,7 +6,7 @@ import RenderHtml from 'react-native-render-html';
 import styles from './DetailCard.style';
 import Button from '../Button';
 
-const DetailCard = ({data, loading}) => {
+const DetailCard = ({data}) => {
   console.log(data);
   const {width} = useWindowDimensions();
   const {contents, name, locations, levels} = data;
@@ -31,7 +31,6 @@ const DetailCard = ({data, loading}) => {
           IconName="logout"
           IconColor="white"
           IconLeft
-          loading
         />
         <Button
           style={styles.button}
@@ -39,7 +38,6 @@ const DetailCard = ({data, loading}) => {
           IconName="heart-outline"
           IconColor="white"
           IconLeft
-          loading
         />
       </View>
     </ScrollView>

@@ -208,22 +208,19 @@ and make sure to add the following import statement at the top of this file belo
 
 ### Render HTML
 - [react-native-render-html](https://www.npmjs.com/package/react-native-render-html)
-- ```` 
+- ``` 
 import {useWindowDimensions} from 'react-native';
 import RenderHtml from 'react-native-render-html';
 
 const DetailCard = ({data}) => {
   const {width} = useWindowDimensions();
-  const source = {html:data.contents};
   return (
     <View>
-      <RenderHtml contentWidth={width} source={source} />
+      <RenderHtml contentWidth={width} source={data.contents} />
     </View>
   );
 };
 
 export default DetailCard;
- ````
-### Picker for select page number
-- [react-native-picker/picker](https://www.npmjs.com/package/@react-native-picker/picker)
-- 
+ ```
+ 

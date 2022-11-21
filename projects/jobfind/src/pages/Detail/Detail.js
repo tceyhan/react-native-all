@@ -23,7 +23,7 @@ const Detail = ({route}) => {
 
   return (
     <View style={styles.container}>
-      <DetailCard data={data} loading={loading}/>
+      <DetailCard data={data} />
     </View>
   );
 };

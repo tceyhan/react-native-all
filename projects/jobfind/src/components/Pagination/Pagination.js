@@ -1,10 +1,9 @@
 /* eslint-disable prettier/prettier */
-import {Text, TouchableWithoutFeedback, View} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
 import Button from '../Button';
-
+import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import styles from './Pagination.style';
-import PickerComp from '../../Picker/PickerComp';
 
 const Pagination = ({page, setPage, data}) => {
   const totalPage = Math.floor(data.page_count / 20);
@@ -27,11 +26,6 @@ const Pagination = ({page, setPage, data}) => {
         <Text style={styles.page}>
           {page + 1} / {totalPage}
         </Text>
-        <PickerComp
-          style={styles.picker}
-          page={page + 1}
-          totalPage={totalPage}
-        />
       </View>
       <Button
         text="Next"
