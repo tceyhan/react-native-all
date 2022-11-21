@@ -12,7 +12,7 @@ import Pagination from '../../components/Pagination';
 const Home = ({navigation}) => {
   const [page, setPage] = useState(0);
   const {data, error, loading} = useFetch(`${Config.API_URL}?page=${page}`);
-  console.log(data.results);
+  // console.log(data.results);
 
   if (error) {
     return <Error />;

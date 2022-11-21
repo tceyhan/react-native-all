@@ -6,13 +6,13 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    marginVertical:5,
   },
   page_container: {
     padding: 8,
-    margin: 10,
+    marginHorizontal: 10,
     backgroundColor: '#c77',
     borderRadius: 10,
-    alignItems: 'center',
   },
   page: {
     fontWeight: 'bold',

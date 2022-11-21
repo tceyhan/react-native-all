@@ -4,7 +4,7 @@ import {View, Text, TouchableWithoutFeedback} from 'react-native';
 import styles from './JobCard.style';
 
 const JobCard = ({item, onDetail}) => {
-  console.log(item);
+  // console.log(item);
   return (
     <TouchableWithoutFeedback onPress={onDetail}>
       <View  style={styles.container}>

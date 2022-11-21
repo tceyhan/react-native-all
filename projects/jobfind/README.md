@@ -205,3 +205,22 @@ and make sure to add the following import statement at the top of this file belo
 
 - [Lottie döküman](https://www.npmjs.com/package/lottie-react-native)
 - `npm i lottie-react-native`
+
+### Render HTML
+- [react-native-render-html](https://www.npmjs.com/package/react-native-render-html)
+- ``` 
+import {useWindowDimensions} from 'react-native';
+import RenderHtml from 'react-native-render-html';
+
+const DetailCard = ({data}) => {
+  const {width} = useWindowDimensions();
+  return (
+    <View>
+      <RenderHtml contentWidth={width} source={data.contents} />
+    </View>
+  );
+};
+
+export default DetailCard;
+ ```
+ 

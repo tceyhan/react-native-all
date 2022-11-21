@@ -7,9 +7,12 @@ import Loading from '../../components/Loading';
 import useFetch from '../../hooks/useFetch';
 import DetailCard from '../../components/DetailCard';
 
+import styles from './Detail.style';
+
 const Detail = ({route}) => {
   const {id} = route.params;
   const {loading, error, data} = useFetch(`${Config.API_URL}/${id}`);
+  // console.log(data);
 
   if (loading) {
     return <Loading />;
@@ -19,8 +22,8 @@ const Detail = ({route}) => {
   }
 
   return (
-    <View>
-      <DetailCard detail={data} />
+    <View style={styles.container}>
+      <DetailCard data={data} />
     </View>
   );
 };

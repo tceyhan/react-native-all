@@ -22,7 +22,7 @@ const appReducer = (state = initialState, {type, payload}) => {
       return {...state, error: false};
     default:
       return state;
-  }
+  };
 };
 
 export default appReducer;
