@@ -2,14 +2,27 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  header_container: {
-    borderWidth: 1,
-    backgroundColor: 'lightgrey',
-    padding: 5,
-  },
   content_container: {
     borderWidth: 1,
     padding: 10,
+  },
+  header_container: {
+    // // borderWidth: 1,
+    backgroundColor: '#f8f8ff',
+    padding: 5,
+  },
+  jobname:{
+    fontWeight: 'bold',
+    fontSize:22,
+    color: 'black',
+  },
+  text: {color:'#c55', fontWeight: 'bold'},
+  inner_text:{color:'black', fontWeight: 'bold'},
+  header:{
+    textAlign: 'center',
+    fontSize:25,
+    fontWeight: 'bold',
+    color: 'black',
   },
   button_container: {
     flexDirection: 'row',

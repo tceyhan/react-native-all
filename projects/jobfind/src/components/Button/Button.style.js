@@ -3,12 +3,11 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    padding: 8,
+    paddingHorizontal: 8,
     margin: 5,
     backgroundColor: '#c77',
     borderRadius: 10,
     alignItems: 'center',
-    // height:40,
   },
   inner_container: {
     flexDirection: 'row',
@@ -17,11 +16,11 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   icon:{
-    marginRight: 5,
+    marginHorizontal: 5,
   },
   title: {
     fontWeight: 'bold',
-    fontSize: 17,
+    fontSize: 15,
     color: 'white',
   },
 });

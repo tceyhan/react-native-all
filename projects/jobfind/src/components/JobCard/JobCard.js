@@ -8,7 +8,7 @@ const JobCard = ({item, onDetail}) => {
   return (
     <TouchableWithoutFeedback onPress={onDetail}>
       <View  style={styles.container}>
-        <Text style={styles.name}>{item.name.slice(0,40) + '...'}</Text>
+        <Text style={styles.name}>{item.name.split('-', 1)}</Text>
         <Text style={styles.company_name}>{item.company.name}</Text>
         <Text style={styles.location}>{item.locations[0].name}</Text>
         <Text style={styles.level}>{item.levels[0].name}</Text>

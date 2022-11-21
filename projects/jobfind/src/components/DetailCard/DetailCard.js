@@ -7,22 +7,21 @@ import styles from './DetailCard.style';
 import Button from '../Button';
 
 const DetailCard = ({data}) => {
-  console.log(data.locations);
+  console.log(data);
   const {width} = useWindowDimensions();
-  const {
-    contents,
-    short_name,
-    locations,
-    levels,
-  } = data;
+  const {contents, name, locations, levels} = data;
   const source = {html: contents};
   return (
     <ScrollView contentContainerStyle={styles.content_container}>
       <View style={styles.header_container}>
-        <Text>{short_name}</Text>
-        <Text>Location: {locations[0].name}</Text>
-        <Text>Job Level: {levels[0].name}</Text>
-        <Text>Job Detail</Text>
+        <Text style={styles.jobname}>{name.split('-',1)}</Text>
+        <Text style={styles.text}>
+          Locations: <Text style={styles.inner_text}>{locations[0].name}</Text>{' '}
+        </Text>
+        <Text style={styles.text}>
+          Job Level: <Text style={styles.inner_text}> {levels[0].name}</Text>
+        </Text>
+        <Text style={styles.header}>Job Detail</Text>
       </View>
       <RenderHtml contentWidth={width} source={source} />
       <View style={styles.button_container}>
