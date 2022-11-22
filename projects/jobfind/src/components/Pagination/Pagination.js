@@ -2,7 +2,6 @@
 import {Text, View} from 'react-native';
 import React from 'react';
 import Button from '../Button';
-import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import styles from './Pagination.style';
 
 const Pagination = ({page, setPage, data}) => {
@@ -15,24 +14,28 @@ const Pagination = ({page, setPage, data}) => {
   };
   return (
     <View style={styles.pagination_container}>
-      <Button
-        text="Previous"
-        onPress={decreasePage}
-        IconName="chevron-left"
-        IconColor="white"
-        IconLeft
-      />
+      {page > 0 && (
+        <Button
+          text="Previous"
+          onPress={decreasePage}
+          IconName="chevron-left"
+          IconColor="white"
+          IconLeft
+        />
+      )}
       <View style={styles.page_container}>
         <Text style={styles.page}>
           {page + 1} / {totalPage}
         </Text>
       </View>
-      <Button
-        text="Next"
-        onPress={increasePage}
-        IconName="chevron-right"
-        IconColor="white"
-      />
+      {page < totalPage && (
+        <Button
+          text="Next"
+          onPress={increasePage}
+          IconName="chevron-right"
+          IconColor="white"
+        />
+      )}
     </View>
   );
 };
