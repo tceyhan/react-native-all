@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // /* eslint-disable prettier/prettier */
 // import {createSlice} from '@reduxjs/toolkit';
 

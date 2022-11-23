@@ -6,8 +6,9 @@ import RenderHtml from 'react-native-render-html';
 import styles from './DetailCard.style';
 import Button from '../Button';
 
-const DetailCard = ({data}) => {
-  console.log(data);
+const DetailCard = ({data, handleFav}) => {
+  // console.log(data);
+
   const {width} = useWindowDimensions();
   const {contents, name, locations, levels} = data;
   const source = {html: contents};
@@ -34,6 +35,7 @@ const DetailCard = ({data}) => {
         />
         <Button
           style={styles.button}
+          onPress={handleFav}
           text="Favorite Job"
           IconName="heart-outline"
           IconColor="white"

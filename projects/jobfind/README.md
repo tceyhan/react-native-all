@@ -214,9 +214,10 @@ import RenderHtml from 'react-native-render-html';
 
 const DetailCard = ({data}) => {
   const {width} = useWindowDimensions();
+  const source = { html:data.contents}
   return (
     <View>
-      <RenderHtml contentWidth={width} source={data.contents} />
+      <RenderHtml contentWidth={width} source={source} />
     </View>
   );
 };

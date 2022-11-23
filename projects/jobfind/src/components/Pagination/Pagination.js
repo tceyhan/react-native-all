@@ -19,8 +19,10 @@ const Pagination = ({page, setPage, data}) => {
           text="Previous"
           onPress={decreasePage}
           IconName="chevron-left"
+          // bu isimler material_community_icons da olan isimler
           IconColor="white"
           IconLeft
+          // burada true icon solda kalacak, eğer sağda kalmasını istiyorsan herhangi bir şey yazmana gerek yok
         />
       )}
       <View style={styles.page_container}>

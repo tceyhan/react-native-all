@@ -1,11 +1,20 @@
 /* eslint-disable prettier/prettier */
-import {View, Text} from 'react-native';
+import {FlatList, View} from 'react-native';
 import React from 'react';
+import FavCard from '../../components/FavCard';
 
-const Favourite = () => {
+const Favourite = ({route}) => {
+  const {fav} = route.params;
+  // console.log(fav);
+
+ const renderFav = ({item}) => <FavCard data={item} />;
   return (
     <View>
-      <Text>Favourite</Text>
+      <FlatList
+       keyExtractor={item => item.id}
+       data={fav}
+       renderItem={renderFav}
+      />
     </View>
   );
 };
