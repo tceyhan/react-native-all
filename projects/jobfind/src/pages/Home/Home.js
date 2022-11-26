@@ -8,11 +8,14 @@ import JobCard from '../../components/JobCard';
 import Error from '../../components/Error';
 import Loading from '../../components/Loading';
 import Pagination from '../../components/Pagination';
+import { useDispatch } from 'react-redux';
+import { selectedJob } from '../../redux/features/jobSlice';
 
 const Home = ({navigation}) => {
   const [page, setPage] = useState(0);
   const {data, error, loading} = useFetch(`${Config.API_URL}?page=${page}`);
   // console.log(data.results);
+  const dispatch = useDispatch();
 
   if (error) {
     return <Error />;
@@ -23,11 +26,12 @@ const Home = ({navigation}) => {
   }
 
 
-  const handleDetail = (id) => {
+  const handleDetail = (id, name) => {
     navigation.navigate('Detail', {id});
+    dispatch(selectedJob(name));
   };
   const renderJob = ({item}) => (
-    <JobCard item={item} onDetail={() => handleDetail(item.id)} />
+    <JobCard item={item} onDetail={() => handleDetail(item.id, item.categories[0].name)} />
   );
   return (
     <View>

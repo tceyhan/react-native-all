@@ -1,13 +1,15 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable prettier/prettier */
-
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Home from '../Home';
 import Detail from '../Detail';
+import HeaderBar from '../../components/HeaderBar';
 
 const StackNavigation = () => {
+
   const Stack = createNativeStackNavigator();
+
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -28,6 +30,7 @@ const StackNavigation = () => {
         name="Detail"
         component={Detail}
         options={{
+          headerTitle: (props) => <HeaderBar {...props} />,
           title: 'Job Detail',
           headerStyle: {backgroundColor: 'white'},
           headerTitleStyle: {

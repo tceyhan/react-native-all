@@ -3,13 +3,21 @@ import React from 'react';
 import {View, Text, TouchableWithoutFeedback} from 'react-native';
 import Button from '../Button';
 import styles from './FavCard.style';
+import {useDispatch} from 'react-redux';
+import {removeFavorite} from '../../redux/features/jobSlice';
 
-const FavCard = ({data, onDetail}) => {
-  console.log(data);
-  const {name, company, locations, levels  } = data;
-  console.log(name);
+const FavCard = ({data}) => {
+  const dispatch = useDispatch();
+
+  const {id, name, company, locations, levels} = data;
+  // console.log(name);
+
+  const handleRemove = () => {
+    dispatch(removeFavorite(id));
+  };
+
   return (
-    <TouchableWithoutFeedback onPress={onDetail}>
+    <TouchableWithoutFeedback>
       <View style={styles.container}>
         <Text style={styles.name}>{name.split('-', 1)}</Text>
         <Text style={styles.company_name}>{company.name}</Text>
@@ -19,9 +27,8 @@ const FavCard = ({data, onDetail}) => {
           <Text style={styles.location}>Empty Location</Text>
         )}
         <Text style={styles.level}>{levels[0].name}</Text>
-        <Button text="Remove" />
+        <Button text="Remove" onPress={() => handleRemove(id)} />
       </View>
-     
     </TouchableWithoutFeedback>
   );
 };

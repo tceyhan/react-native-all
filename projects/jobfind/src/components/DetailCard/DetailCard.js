@@ -35,7 +35,7 @@ const DetailCard = ({data, handleFav}) => {
         />
         <Button
           style={styles.button}
-          onPress={handleFav}
+          onPress={() => handleFav(data)}
           text="Favorite Job"
           IconName="heart-outline"
           IconColor="white"
