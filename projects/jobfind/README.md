@@ -224,4 +224,8 @@ const DetailCard = ({data}) => {
 
 export default DetailCard;
  ```
+
+ ### react-native-toast-message
+ 
+ - [react-native-toast-message](https://github.com/calintamas/react-native-toast-message/blob/main/docs/quick-start.md)
  
