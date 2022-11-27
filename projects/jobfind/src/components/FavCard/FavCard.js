@@ -5,6 +5,7 @@ import Button from '../Button';
 import styles from './FavCard.style';
 import {useDispatch} from 'react-redux';
 import {removeFavorite} from '../../redux/features/jobSlice';
+import {showToast} from '../Toast/ToastComp';
 
 const FavCard = ({data, handleDetail}) => {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const FavCard = ({data, handleDetail}) => {
   // console.log(name);
 
   const handleRemove = () => {
+    showToast('remove');
     dispatch(removeFavorite(id));
   };
 

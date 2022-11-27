@@ -71,4 +71,11 @@ export const showToast = (type) => {
       text2: 'This job is already had added 💢',
     });
   }
+  if (type === 'remove') {
+    return Toast.show({
+      type: 'success',
+      text1: 'Remove',
+      text2: 'Succesfuly removed 🗑️',
+    });
+  }
 };
