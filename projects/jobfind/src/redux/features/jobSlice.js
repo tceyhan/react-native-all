@@ -20,7 +20,6 @@ const jobSlice = createSlice({
       });
     },
   },
-  extraReducers: {},
 });
 
 export const {addFavorite, removeFavorite, selectedJob} = jobSlice.actions;

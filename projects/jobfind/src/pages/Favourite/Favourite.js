@@ -1,31 +1,43 @@
 /* eslint-disable prettier/prettier */
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, Text, View} from 'react-native';
 import React from 'react';
 import FavCard from '../../components/FavCard';
 import {useSelector} from 'react-redux';
+import Button from '../../components/Button';
+import styles from './Favourite.style';
+import Empty from '../../components/Empty';
 
-const Favourite = () => {
+const Favourite = ({navigation}) => {
   const {favoriteJobs} = useSelector(state => state.job);
   // console.log(favoriteJobs);
 
+  const backHome = () => {
+    navigation.navigate('Home');
+  };
+
   const renderFav = ({item}) => <FavCard data={item} />;
   return (
-    <View>
-      {favoriteJobs.length > 0 ? (
+    <View style={styles.up_container}>
+      {favoriteJobs.length > 0 && (
         <FlatList data={favoriteJobs} renderItem={renderFav} />
-      ) : (
-        <Text style={styles.title}>You don't have any favorite job</Text>
+      )}
+      {favoriteJobs.length === 0 && (
+        <View style={styles.container}>
+          <Empty style={styles.lottie} />
+          <View>
+            <Text style={styles.title}> You don't have any favorite job</Text>
+            <Button
+              style={styles.buttons}
+              text="Home Page"
+              onPress={backHome}
+              IconName="home"
+              IconColor="white"
+            />
+          </View>
+        </View>
       )}
     </View>
   );
 };
 
 export default Favourite;
-
-export const styles = StyleSheet.create({
-  title: {
-    fontWeight: 'bold',
-    fontStyle: 'italic',
-    fontSize: 20,
-  },
-});

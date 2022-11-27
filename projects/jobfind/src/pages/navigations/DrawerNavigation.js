@@ -29,12 +29,12 @@ const DrawerNavigation = () => {
       <Drawer.Screen
         name="StackNavigation"
         component={StackNavigation}
-        options={{headerShown: false, drawerLabel: 'Jobs'}}
+        options={{drawerLabel: 'Jobs'}}
       />
       <Drawer.Screen
         name="Favourite"
         component={Favourite}
-        options={{headerShown:false, drawerLabel: 'Favorite Jobs'}}
+        options={{ drawerLabel: 'Favorite Jobs'}}
       />
     </Drawer.Navigator>
   );
