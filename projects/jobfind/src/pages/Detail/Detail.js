@@ -28,8 +28,13 @@ const Detail = ({route}) => {
   const handleFav = item => {
     const value = favoriteJobs.includes(item);
     console.log(value);
-    value ? showToast('error') : showToast('success');
-    return value ? null : dispatch(addFavorite(item));
+    if (value) {
+      showToast('error');
+      return;
+    } else {
+      showToast('success');
+      return dispatch(addFavorite(item));
+    }
   };
   return (
     <View style={styles.container}>
