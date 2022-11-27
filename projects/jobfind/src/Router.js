@@ -4,7 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import store from './redux/store';
 import {Provider} from 'react-redux';
 import DrawerNavigation from './pages/navigations/DrawerNavigation';
-import Toast from 'react-native-toast-message';
+import { ToastComp } from './components/Toast/ToastComp';
+
 
 const Router = () => {
   return (
@@ -12,7 +13,7 @@ const Router = () => {
       <NavigationContainer>
         <DrawerNavigation />
       </NavigationContainer>
-      <Toast />
+      <ToastComp />
     </Provider>
   );
 };

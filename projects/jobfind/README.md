@@ -226,6 +226,9 @@ export default DetailCard;
  ```
 
  ### react-native-toast-message
- 
+
  - [react-native-toast-message](https://github.com/calintamas/react-native-toast-message/blob/main/docs/quick-start.md)
  
+
+ ### axios
+ - [ axios react native version](https://www.npmjs.com/package/axios/v/0.26.0)
