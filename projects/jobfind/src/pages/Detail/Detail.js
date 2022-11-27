@@ -8,14 +8,15 @@ import useFetch from '../../hooks/useFetch';
 import DetailCard from '../../components/DetailCard';
 
 import styles from './Detail.style';
-import { useDispatch } from 'react-redux';
-import { addFavorite } from '../../redux/features/jobSlice';
+import {useDispatch, useSelector} from 'react-redux';
+import {addFavorite} from '../../redux/features/jobSlice';
 
 const Detail = ({route}) => {
   const {id} = route.params;
   const {loading, error, data} = useFetch(`${Config.API_URL}/${id}`);
   // console.log(data);
   const dispatch = useDispatch();
+  const {favoriteJobs} = useSelector(state => state.job);
 
   if (loading) {
     return <Loading />;
@@ -23,16 +24,14 @@ const Detail = ({route}) => {
   if (error) {
     return <Error />;
   }
-const handleFav = (item) => {
-  dispatch(addFavorite(item));
-};
+  const handleFav = item => {
+    const value = favoriteJobs.includes(item);
+    console.log(value);
+    return value ? null : dispatch(addFavorite(item));
+  };
   return (
     <View style={styles.container}>
-      <DetailCard
-        data={data}
-        loading={loading}
-        handleFav={handleFav}
-      />
+      <DetailCard data={data} loading={loading} handleFav={handleFav} />
     </View>
   );
 };

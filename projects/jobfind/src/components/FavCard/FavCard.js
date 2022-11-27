@@ -6,7 +6,7 @@ import styles from './FavCard.style';
 import {useDispatch} from 'react-redux';
 import {removeFavorite} from '../../redux/features/jobSlice';
 
-const FavCard = ({data}) => {
+const FavCard = ({data, handleDetail}) => {
   const dispatch = useDispatch();
 
   const {id, name, company, locations, levels} = data;
@@ -17,7 +17,7 @@ const FavCard = ({data}) => {
   };
 
   return (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback onPress={() => handleDetail(id)}>
       <View style={styles.container}>
         <Text style={styles.name}>{name.split('-', 1)}</Text>
         <Text style={styles.company_name}>{company.name}</Text>

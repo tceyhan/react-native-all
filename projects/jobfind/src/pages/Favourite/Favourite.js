@@ -15,7 +15,11 @@ const Favourite = ({navigation}) => {
     navigation.navigate('Home');
   };
 
-  const renderFav = ({item}) => <FavCard data={item} />;
+  const handleDetail = (id) => {
+    navigation.navigate('Detail', {id});
+  };
+
+  const renderFav = ({item}) => <FavCard data={item} handleDetail={() => handleDetail(item.id)}/>;
   return (
     <View style={styles.up_container}>
       {favoriteJobs.length > 0 && (

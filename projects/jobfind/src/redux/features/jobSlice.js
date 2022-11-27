@@ -9,7 +9,7 @@ const jobSlice = createSlice({
   },
   reducers: {
     selectedJob: (state, action) => {
-        state.selectedJob = action.payload;
+      state.selectedJob = action.payload;
     },
     addFavorite: (state, action) => {
       state.favoriteJobs.push(action.payload);
