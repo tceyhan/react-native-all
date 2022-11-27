@@ -32,7 +32,7 @@ const Favourite = ({navigation}) => {
             <Text style={styles.title}> You don't have any favorite job</Text>
             <Button
               style={styles.buttons}
-              text="Home Page"
+              text="Go Home Page"
               onPress={backHome}
               IconName="home"
               IconColor="white"

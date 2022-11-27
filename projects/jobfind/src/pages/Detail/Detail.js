@@ -6,6 +6,7 @@ import Error from '../../components/Error';
 import Loading from '../../components/Loading';
 import useFetch from '../../hooks/useFetch';
 import DetailCard from '../../components/DetailCard';
+import Toast from 'react-native-toast-message';
 
 import styles from './Detail.style';
 import {useDispatch, useSelector} from 'react-redux';
@@ -24,9 +25,26 @@ const Detail = ({route}) => {
   if (error) {
     return <Error />;
   }
+  const showToast = type => {
+    if (type === 'success') {
+      return Toast.show({
+        type: 'success',
+        text1: 'Congrats',
+        text2: 'Succesfully add favorite👋',
+      });
+    }
+    if (type === 'error') {
+      return Toast.show({
+        type: 'error',
+        text1: 'Sorry',
+        text2: 'This job is already had added',
+      });
+    }
+  };
   const handleFav = item => {
     const value = favoriteJobs.includes(item);
     console.log(value);
+    value ? showToast('error') : showToast('success');
     return value ? null : dispatch(addFavorite(item));
   };
   return (
