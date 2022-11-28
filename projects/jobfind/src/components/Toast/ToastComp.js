@@ -17,11 +17,11 @@ export const ToastComp = () => {
         contentContainerStyle={{paddingHorizontal: 15}}
         text1Style={{
           fontSize: 17,
-          fontWeight: '400',
+          fontWeight: 'bold',
         }}
         text2Style={{
           fontSize: 18,
-          fontWeight: '400',
+          fontWeight: 'bold',
           color: 'green',
         }}
       />
@@ -35,9 +35,11 @@ export const ToastComp = () => {
         style={{borderLeftColor: 'red'}}
         {...props}
         text1Style={{
+          fontWeight: 'bold',
           fontSize: 17,
         }}
         text2Style={{
+          fontWeight: 'bold',
           fontSize: 18,
           color: '#c44',
         }}
