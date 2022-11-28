@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View} from 'react-native';
+import {Linking, View} from 'react-native';
 import Config from 'react-native-config';
 import Error from '../../components/Error';
 import Loading from '../../components/Loading';
@@ -25,6 +25,14 @@ const Detail = ({route}) => {
   if (error) {
     return <Error />;
   }
+  const handleApply = link => {
+    if (link) {
+      return Linking.openURL(link);
+    } else {
+      return showToast('nolink');
+    }
+  };
+
   const handleFav = item => {
     const value = favoriteJobs.includes(item);
     console.log(value);
@@ -38,7 +46,7 @@ const Detail = ({route}) => {
   };
   return (
     <View style={styles.container}>
-      <DetailCard data={data} loading={loading} handleFav={handleFav} />
+      <DetailCard data={data} loading={loading} handleFav={handleFav} handleApply={handleApply}/>
     </View>
   );
 };

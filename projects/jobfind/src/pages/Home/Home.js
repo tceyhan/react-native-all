@@ -31,7 +31,7 @@ const Home = ({navigation}) => {
     dispatch(selectedJob(name));
   };
   const renderJob = ({item}) => (
-    <JobCard item={item} onDetail={() => handleDetail(item.id, item.short_name.split('-', 1))} />
+    <JobCard item={item} onDetail={() => handleDetail(item.id, item.categories[0].name)} />
   );
   return (
     <View>

@@ -6,11 +6,11 @@ import RenderHtml from 'react-native-render-html';
 import styles from './DetailCard.style';
 import Button from '../Button';
 
-const DetailCard = ({data, handleFav}) => {
-  // console.log(data);
-
+const DetailCard = ({data, handleFav, handleApply}) => {
+  console.log(data);
+  console.log(typeof (data.refs.landing_page));
   const {width} = useWindowDimensions();
-  const {contents, name, locations, levels} = data;
+  const {contents, name, locations, levels, refs} = data;
   const source = {html: contents};
   return (
     <ScrollView contentContainerStyle={styles.content_container}>
@@ -28,6 +28,7 @@ const DetailCard = ({data, handleFav}) => {
       <View style={styles.button_container}>
         <Button
           style={styles.button}
+          onPress={() => handleApply(refs.landing_page)}
           text="Submit"
           IconName="logout"
           IconColor="white"

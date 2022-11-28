@@ -66,18 +66,25 @@ export const showToast = (type) => {
       text2: 'Succesfully add favorite👋',
     });
   }
-  if (type === 'error') {
+  else if (type === 'error') {
     return Toast.show({
       type: 'error',
       text1: 'Sorry',
       text2: 'This job is already had added 💢',
     });
   }
-  if (type === 'remove') {
+  else if (type === 'remove') {
     return Toast.show({
       type: 'success',
       text1: 'Remove',
       text2: 'Succesfuly removed 🗑️',
+    });
+  }
+  else if (type === 'nolink') {
+    return Toast.show({
+      type: 'error',
+      text1: 'Emty Link',
+      text2: 'This job has not a link',
     });
   }
 };
