@@ -3,7 +3,8 @@ import {Alert, View} from 'react-native';
 import React, {useState} from 'react';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-import { showToast } from '../../components/Toast/ToastComp';
+import {showToast} from '../../components/Toast/ToastComp';
+import styles from './Register.style';
 
 const Register = ({navigation}) => {
   const [userName, setUserName] = useState(null);
@@ -29,7 +30,7 @@ const Register = ({navigation}) => {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <Input
         label="Name :"
         placeholder="Enter member name..."
@@ -50,7 +51,13 @@ const Register = ({navigation}) => {
         iconName="email-outline"
       />
 
-      <Button text="Register" onPress={handleSubmit} IconName="account-plus-outline" IconColor="gray" IconLeft/>
+      <Button
+        text="Register"
+        onPress={handleSubmit}
+        IconName="account-plus-outline"
+        IconColor="gray"
+        IconLeft
+      />
     </View>
   );
 };
