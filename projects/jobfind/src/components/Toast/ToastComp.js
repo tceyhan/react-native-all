@@ -87,4 +87,11 @@ export const showToast = (type) => {
       text2: 'This job has not a link',
     });
   }
+  else if (type === 'register') {
+    return Toast.show({
+      type: 'success',
+      text1: 'Register',
+      text2: 'Succesfully sign up👋',
+    });
+  }
 };

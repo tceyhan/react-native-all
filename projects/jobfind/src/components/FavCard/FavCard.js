@@ -29,7 +29,7 @@ const FavCard = ({data, handleDetail}) => {
           <Text style={styles.location}>Empty Location</Text>
         )}
         <Text style={styles.level}>{levels[0].name}</Text>
-        <Button text="Remove" onPress={() => handleRemove(id)} />
+        <Button text="Remove" onPress={() => handleRemove(id)} IconName="trash-can-outline" IconColor="white"/>
       </View>
     </TouchableWithoutFeedback>
   );

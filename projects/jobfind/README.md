@@ -232,3 +232,7 @@ export default DetailCard;
 
  ### axios
  - [ axios react native version](https://www.npmjs.com/package/axios/v/0.26.0)
+
+ ### Linking
+ - [](https://reactnative.dev/docs/linking)
+ 
