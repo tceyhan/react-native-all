@@ -6,21 +6,16 @@ const authSlice = createSlice({
   name: 'auth',
   initialState: {
     users: [],
-    fullName:null,
   },
   reducers: {
-      // showUser:(state, action) => {
-      //    state.fullName = action.payload;
-      //    return state.fullName;
-      // },
       addUser: (state, action) => {
       state.users.push(action.payload);
+      const user = action.payload;
+      AsyncStorage.setItem('@USER',  JSON.stringify(user));
     },
-    removeUser: (state, action) => {
-      state.users = state.users.filter(user => {
+    removeUser: (state) => {
         AsyncStorage.removeItem('@USER');
-        return user.id !== action.payload;
-      });
+        return state.users.pop();
     },
   },
 });

@@ -2,20 +2,15 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  pagination_container: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'lightgrey',
+  container: {
+    flex: 1,
   },
-  page_container: {
-    padding: 8,
-    margin: 10,
-    backgroundColor: '#005ac1',
+  fullName:{
+    display: 'flex',
     borderRadius: 10,
-    alignItems: 'center',
-  },
-  page: {
+    padding: 5,
+    backgroundColor: '#c44',
+    alignSelf: 'flex-end',
     fontWeight: 'bold',
     fontSize: 17,
     color: 'white',

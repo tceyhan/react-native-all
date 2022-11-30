@@ -53,7 +53,6 @@ const Register = ({navigation}) => {
     } else {
       showToast('register');
       dispatch(addUser(user));
-      AsyncStorage.setItem('@USER',  JSON.stringify(user.userFullName));
       navigation.navigate('Login');
     }
   }

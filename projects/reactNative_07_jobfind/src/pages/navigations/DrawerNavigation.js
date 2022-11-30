@@ -3,7 +3,7 @@ import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Favourite from '../Favourite';
 import StackNavigation from './StackNavigation';
-import User from '../User';
+
 
 const DrawerNavigation = () => {
   const Drawer = createDrawerNavigator();
@@ -23,7 +23,7 @@ const DrawerNavigation = () => {
         },
         // drawerHideStatusBarOnOpen: true,
         // drawerStatusBarAnimation: 'fade',
-        drawerType: 'back',
+        // drawerType: 'back',
         headerShown: false,
       }}>
       <Drawer.Screen
@@ -35,11 +35,6 @@ const DrawerNavigation = () => {
         name="Favourite"
         component={Favourite}
         options={{drawerLabel: 'Favorite Jobs'}}
-      />
-      <Drawer.Screen
-        name="User"
-        component={User}
-        options={{drawerLabel: 'User'}}
       />
     </Drawer.Navigator>
   );

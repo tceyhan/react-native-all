@@ -12,7 +12,7 @@ const Favourite = ({navigation}) => {
   // console.log(favoriteJobs);
 
   const backHome = () => {
-    navigation.navigate('Home');
+    navigation.navigate('StackNavigation');
   };
 
   const handleDetail = (id) => {
