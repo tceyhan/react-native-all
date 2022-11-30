@@ -94,4 +94,18 @@ export const showToast = (type) => {
       text2: 'Succesfully sign up👋',
     });
   }
+  else if (type === 'welcome') {
+    return Toast.show({
+      type: 'success',
+      text1: 'Login',
+      text2: 'Succesfully Login👋',
+    });
+  }
+  else if (type === 'errorlogin') {
+    return Toast.show({
+      type: 'error',
+      text1: 'Login',
+      text2: 'Something is went wrong ⚠️',
+    });
+  }
 };

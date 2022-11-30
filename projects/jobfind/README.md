@@ -235,4 +235,11 @@ export default DetailCard;
 
  ### Linking
  - [](https://reactnative.dev/docs/linking)
+
+### Formik and yup
+- [Formik]()
+- [Yup]()
+
+### uuid
+ - [react native uuid](https://www.npmjs.com/package/react-native-uuid)
  

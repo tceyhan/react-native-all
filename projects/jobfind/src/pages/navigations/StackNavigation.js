@@ -6,6 +6,7 @@ import Home from '../Home';
 import Detail from '../Detail';
 import HeaderBar from '../../components/HeaderBar';
 import Register from '../Register';
+import Login from '../Login/Login';
 
 
 const StackNavigation = () => {
@@ -18,11 +19,28 @@ const StackNavigation = () => {
         component={Register}
         options={{
           title: 'Register',
+          headerShown:false,
           headerStyle: {backgroundColor: '#c55'},
           headerTitleStyle: {
             color: 'white',
             fontWeight: 'bold',
             fontSize: 25,
+          },
+          headerTitleAlign: 'center',
+        }}
+      />
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{
+          title: 'Login',
+          // headerShown:false,
+          headerStyle: {backgroundColor: '#c55'},
+          headerTitleStyle: {
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: 25,
+            
           },
           headerTitleAlign: 'center',
         }}

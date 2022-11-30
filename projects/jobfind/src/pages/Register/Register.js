@@ -4,12 +4,20 @@ import React, {useState} from 'react';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import {showToast} from '../../components/Toast/ToastComp';
+import uuid from 'react-native-uuid';
+
 import styles from './Register.style';
+import {useDispatch} from 'react-redux';
+import {addUser} from '../../redux/features/authSlice';
 
 const Register = ({navigation}) => {
   const [userName, setUserName] = useState(null);
   const [userSurname, setUserSurname] = useState(null);
+  const [userPassword, setUserPassword] = useState(null);
   const [userMail, setUserMail] = useState(null);
+
+  const dispatch = useDispatch();
+  console.log('render');
 
   function handleSubmit() {
     if (!userName || !userSurname || !userMail) {
@@ -20,28 +28,39 @@ const Register = ({navigation}) => {
     }
 
     const user = {
+      id: uuid.v4(),
       userName,
       userSurname,
+      userFullName: `${userName} ${userSurname}`,
+      userPassword,
       userMail,
     };
     console.log(user);
     showToast('register');
-    navigation.navigate('Home', {user});
+    dispatch(addUser(user));
+    navigation.navigate('Login');
   }
 
   return (
     <View style={styles.container}>
       <Input
         label="Name :"
-        placeholder="Enter member name..."
+        placeholder="Enter name..."
         onType={setUserName}
         iconName="account"
       />
       <Input
         label="Surname :"
-        placeholder="Enter member surname..."
+        placeholder="Enter surname..."
         onType={setUserSurname}
         iconName="account"
+      />
+      <Input
+        label="Password:"
+        placeholder="Enter password..."
+        onType={setUserPassword}
+        iconName="key"
+        isSecure
       />
 
       <Input
@@ -55,7 +74,7 @@ const Register = ({navigation}) => {
         text="Register"
         onPress={handleSubmit}
         IconName="account-plus-outline"
-        IconColor="gray"
+        IconColor="white"
         IconLeft
       />
     </View>
