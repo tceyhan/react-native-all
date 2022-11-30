@@ -1,17 +1,17 @@
 /* eslint-disable prettier/prettier */
-import { Image, Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import React from 'react';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import {showToast} from '../../components/Toast/ToastComp';
 import uuid from 'react-native-uuid';
-
 import styles from './Register.style';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {addUser} from '../../redux/features/authSlice';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
 import Errors from '../../components/YupErrors/YupErrors';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const RegisterSchema = Yup.object().shape({
   userName: Yup.string()
@@ -27,9 +27,16 @@ const RegisterSchema = Yup.object().shape({
   userMail: Yup.string().email().required('Required'),
 });
 const Register = ({navigation}) => {
+  const {users} = useSelector(state => state.auth);
   const dispatch = useDispatch();
 
   function handleRegister(values) {
+    let userCheck = users.map(
+      item =>
+        item.userMail === values.userMail &&
+        item.userPassword === values.userPassword,
+    );
+    console.log(userCheck[0]);
     const user = {
       id: uuid.v4(),
       userName: values.userName,
@@ -39,12 +46,19 @@ const Register = ({navigation}) => {
       userMail: values.userMail,
     };
     console.log(user);
-    showToast('register');
-    dispatch(addUser(user));
-    navigation.navigate('Login');
+
+    if (userCheck[0]) {
+      showToast('varuser');
+      return;
+    } else {
+      showToast('register');
+      dispatch(addUser(user));
+      AsyncStorage.setItem('@USER',  JSON.stringify(user.userFullName));
+      navigation.navigate('Login');
+    }
   }
 
-  function handleLoginPage(){
+  function handleLoginPage() {
     navigation.navigate('Login');
   }
 
@@ -88,7 +102,9 @@ const Register = ({navigation}) => {
               iconName="key"
               isSecure
             />
-            {errors.userPassword ? <Errors value={errors.userPassword} /> : null}
+            {errors.userPassword ? (
+              <Errors value={errors.userPassword} />
+            ) : null}
             <Input
               placeholder="Enter mail adress..."
               value={values.userMail}

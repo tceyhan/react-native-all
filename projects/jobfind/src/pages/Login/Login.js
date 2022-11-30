@@ -23,6 +23,7 @@ const Login = ({navigation}) => {
   const {users} = useSelector(state => state.auth);
   console.log(users);
 
+
   function handleLogin(values) {
     console.log(values);
     let user = users.map(
@@ -34,12 +35,12 @@ const Login = ({navigation}) => {
     if (user[0]) {
       showToast('welcome');
       navigation.navigate('Home');
-    } else {
+     } else {
       showToast('errorlogin');
     }
   }
 
-  function handleRegisterPage(){
+  function handleRegisterPage() {
     navigation.navigate('Register');
   }
 
@@ -74,11 +75,21 @@ const Login = ({navigation}) => {
             {errors.userPassword ? (
               <Errors value={errors.userPassword} />
             ) : null}
-            <Button text="Login" onPress={handleSubmit} IconName="account" IconColor="white" IconLeft />
-            <Text style={styles.or}>OR</Text>
-            <Button text="Register" onPress={handleRegisterPage}  IconName="account-plus-outline"
+            <Button
+              text="Login"
+              onPress={handleSubmit}
+              IconName="account"
               IconColor="white"
-              IconLeft/>
+              IconLeft
+            />
+            <Text style={styles.or}>OR</Text>
+            <Button
+              text="Register"
+              onPress={handleRegisterPage}
+              IconName="account-plus-outline"
+              IconColor="white"
+              IconLeft
+            />
           </View>
         )}
       </Formik>

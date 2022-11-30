@@ -6,12 +6,14 @@ const authSlice = createSlice({
   name: 'auth',
   initialState: {
     users: [],
+    fullName:null,
   },
   reducers: {
+      // showUser:(state, action) => {
+      //    state.fullName = action.payload;
+      //    return state.fullName;
+      // },
       addUser: (state, action) => {
-      const jsonValue = JSON.stringify(action.payload);
-      // console.log(jsonValue);
-      AsyncStorage.setItem('@USER', jsonValue);
       state.users.push(action.payload);
     },
     removeUser: (state, action) => {

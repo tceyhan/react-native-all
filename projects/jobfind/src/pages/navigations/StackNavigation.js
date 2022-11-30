@@ -11,6 +11,7 @@ import Login from '../Login/Login';
 
 const StackNavigation = () => {
   const Stack = createNativeStackNavigator();
+ 
 
   return (
     <Stack.Navigator>
@@ -19,7 +20,7 @@ const StackNavigation = () => {
         component={Register}
         options={{
           title: 'Register',
-          headerShown:false,
+          headerShown: false,
           headerStyle: {backgroundColor: '#c55'},
           headerTitleStyle: {
             color: 'white',
@@ -34,13 +35,12 @@ const StackNavigation = () => {
         component={Login}
         options={{
           title: 'Login',
-          headerShown:false,
+          headerShown: false,
           headerStyle: {backgroundColor: '#c55'},
           headerTitleStyle: {
             color: 'white',
             fontWeight: 'bold',
             fontSize: 25,
-            
           },
           headerTitleAlign: 'center',
         }}

@@ -94,6 +94,13 @@ export const showToast = (type) => {
       text2: 'Succesfully sign up👋',
     });
   }
+  else if (type === 'varuser') {
+    return Toast.show({
+      type: 'error',
+      text1: 'Register',
+      text2: 'UserMail is already registered ⚠️',
+    });
+  }
   else if (type === 'welcome') {
     return Toast.show({
       type: 'success',
