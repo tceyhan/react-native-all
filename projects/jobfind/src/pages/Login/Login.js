@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {View, Image, Text} from 'react-native';
-import React, {useEffect} from 'react';
+import React from 'react';
 import styles from './Login.style';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -39,6 +39,10 @@ const Login = ({navigation}) => {
     }
   }
 
+  function handleRegisterPage(){
+    navigation.navigate('Register');
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.logo_container}>
@@ -70,9 +74,11 @@ const Login = ({navigation}) => {
             {errors.userPassword ? (
               <Errors value={errors.userPassword} />
             ) : null}
-            <Button text="Login" onPress={handleSubmit} />
+            <Button text="Login" onPress={handleSubmit} IconName="account" IconColor="white" IconLeft />
             <Text style={styles.or}>OR</Text>
-            <Button text="Register" onPress={handleSubmit} />
+            <Button text="Register" onPress={handleRegisterPage}  IconName="account-plus-outline"
+              IconColor="white"
+              IconLeft/>
           </View>
         )}
       </Formik>

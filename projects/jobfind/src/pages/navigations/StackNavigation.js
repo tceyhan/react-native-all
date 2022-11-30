@@ -34,7 +34,7 @@ const StackNavigation = () => {
         component={Login}
         options={{
           title: 'Login',
-          // headerShown:false,
+          headerShown:false,
           headerStyle: {backgroundColor: '#c55'},
           headerTitleStyle: {
             color: 'white',
