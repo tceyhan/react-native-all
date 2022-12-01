@@ -13,14 +13,16 @@ const Errors = ({value}) => {
 export default Errors;
 
 const styles = StyleSheet.create({
-    errors: {
-        backgroundColor: '#007ac1',
-        alignItems: 'center',
-      },
-      errors_text: {
-        fontSize:18,
-        color: 'red',
-        fontWeight: 'bold',
-        fontStyle: 'italic',
-      },
+  errors: {
+    borderRadius: 10,
+    marginHorizontal: 5,
+    backgroundColor: '#c66',
+    alignItems: 'center',
+  },
+  errors_text: {
+    fontSize: 15,
+    color: 'navy',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+  },
 });

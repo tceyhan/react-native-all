@@ -9,6 +9,7 @@ export default StyleSheet.create({
   logo_container: {
     flex: 1,
     justifyContent: 'center',
+    marginBottom: 5,
   },
   logo: {
     width: Dimensions.get('window').width * 0.9,
@@ -28,5 +29,4 @@ export default StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   },
- 
 });

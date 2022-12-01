@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {View, Image, Text} from 'react-native';
+import {View, Image, Text, StatusBar} from 'react-native';
 import React from 'react';
 import styles from './Login.style';
 import Input from '../../components/Input';
@@ -8,11 +8,12 @@ import Errors from '../../components/YupErrors';
 import {Formik} from 'formik';
 import {useSelector} from 'react-redux';
 import {showToast} from '../../components/Toast/ToastComp';
-import * as Yup from 'yup';
-// import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import * as Yup from 'yup';
 const LoginSchema = Yup.object().shape({
-  userMail: Yup.string().email().required('Required'),
+  userMail: Yup.string()
+    .email('mail adress must be a valid')
+    .required('Required'),
   userPassword: Yup.string()
     .min(4, 'Too Short! password must to contain at least 4 characters')
     .max(15, 'Too Long! password must to contain at most 15 characters')
@@ -22,7 +23,6 @@ const LoginSchema = Yup.object().shape({
 const Login = ({navigation}) => {
   const {users} = useSelector(state => state.auth);
   console.log(users);
-
 
   function handleLogin(values) {
     console.log(values);
@@ -35,7 +35,7 @@ const Login = ({navigation}) => {
     if (user[0]) {
       showToast('welcome');
       navigation.navigate('Home');
-     } else {
+    } else {
       showToast('errorlogin');
     }
   }
@@ -46,6 +46,7 @@ const Login = ({navigation}) => {
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="#c99" />
       <View style={styles.logo_container}>
         <Image
           style={styles.logo}

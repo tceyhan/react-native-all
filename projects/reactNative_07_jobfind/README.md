@@ -242,4 +242,7 @@ export default DetailCard;
 
 ### uuid
  - [react native uuid](https://www.npmjs.com/package/react-native-uuid)
+
+### status bar
+- [](https://reactnavigation.org/docs/status-bar/#stack)
  

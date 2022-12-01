@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {Image, Text, View} from 'react-native';
+import {Image, StatusBar, Text, View} from 'react-native';
 import React from 'react';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -11,20 +11,20 @@ import {addUser} from '../../redux/features/authSlice';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
 import Errors from '../../components/YupErrors/YupErrors';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const RegisterSchema = Yup.object().shape({
   userName: Yup.string()
-    .min(3, 'Too Short! password must to contain at least 3 characters')
+    .min(3, 'Too Short! name must to contain at least 3 characters')
     .required('Required'),
   userSurname: Yup.string()
-    .min(3, 'Too Short! password must to contain at least 3 characters')
+    .min(3, 'Too Short! surnames must to contain at least 3 characters')
     .required('Required'),
   userPassword: Yup.string()
     .min(4, 'Too Short! password must to contain at least 4 characters')
     .max(15, 'Too Long! password must to contain at most 15 characters')
     .required('Required'),
-  userMail: Yup.string().email().required('Required'),
+  userMail: Yup.string().email('mail adress must be a valid').required('Required'),
 });
 const Register = ({navigation}) => {
   const {users} = useSelector(state => state.auth);
@@ -63,6 +63,7 @@ const Register = ({navigation}) => {
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="#c99" />
       <View style={styles.logo_container}>
         <Image
           style={styles.logo}
