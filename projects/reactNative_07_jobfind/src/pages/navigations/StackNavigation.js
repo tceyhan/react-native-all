@@ -33,6 +33,9 @@ const StackNavigation = ({navigation}) => {
     dispatch(removeUser);
     navigation.navigate('Login');
   };
+  const handleFavPage = () => {
+       navigation.navigate('Favourite');
+  };
 
   return (
     <Stack.Navigator>
@@ -41,6 +44,14 @@ const StackNavigation = ({navigation}) => {
         component={Home}
         options={{
           title: 'Jobs',
+          headerLeft: () => (
+            <Icon
+              name="heart-outline"
+              size={30}
+              color="white"
+              onPress={handleFavPage}
+            />
+          ),
           headerRight: () => (
             <Icon
               name="logout"
