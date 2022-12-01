@@ -34,11 +34,20 @@ const StackNavigation = ({navigation}) => {
     navigation.navigate('Login');
   };
   const handleFavPage = () => {
-       navigation.navigate('Favourite');
+    navigation.navigate('Favourite');
   };
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {backgroundColor: '#c55'},
+        headerTitleStyle: {
+          color: 'white',
+          fontWeight: 'bold',
+          fontSize: 25,
+        },
+        headerTitleAlign: 'center',
+      }}>
       <Stack.Screen
         name="Home"
         component={Home}
@@ -60,13 +69,6 @@ const StackNavigation = ({navigation}) => {
               onPress={handleRemove}
             />
           ),
-          headerStyle: {backgroundColor: '#c55'},
-          headerTitleStyle: {
-            color: 'white',
-            fontWeight: 'bold',
-            fontSize: 25,
-          },
-          headerTitleAlign: 'center',
         }}
       />
       <Stack.Screen
@@ -75,13 +77,6 @@ const StackNavigation = ({navigation}) => {
         options={{
           headerTitle: props => <HeaderBar {...props} />,
           title: 'Job Detail',
-          headerStyle: {backgroundColor: 'white'},
-          headerTitleStyle: {
-            color: '#c55',
-            fontWeight: 'bold',
-            fontSize: 25,
-          },
-          headerTitleAlign: 'center',
         }}
       />
     </Stack.Navigator>

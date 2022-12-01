@@ -110,6 +110,7 @@ const Register = ({navigation}) => {
               value={values.userMail}
               onType={handleChange('userMail')}
               iconName="email-outline"
+              inputType="email"
             />
             {errors.userMail ? <Errors value={errors.userMail} /> : null}
             <Button

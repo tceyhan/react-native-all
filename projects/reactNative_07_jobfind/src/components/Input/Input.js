@@ -5,10 +5,10 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './Input.style';
 
 
-const Input = ({placeholder, onType, value, iconName, isSecure}) => {
+const Input = ({placeholder, onType, value, iconName, isSecure, inputType}) => {
   return (
     <View style={styles.container}>
-      <TextInput style={styles.input} placeholder={placeholder} onChangeText={onType} value={value} secureTextEntry={isSecure} />
+      <TextInput style={styles.input} placeholder={placeholder} onChangeText={onType} value={value} secureTextEntry={isSecure} inputType={inputType}/>
       <Icon name={iconName} size={35} color="lightgray"/>
     </View>
   );

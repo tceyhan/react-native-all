@@ -33,9 +33,9 @@ const Detail = ({route}) => {
     }
   };
 
-  const handleFav = item => {
-    const value = favoriteJobs.includes(item);
-    console.log(value);
+  const handleFav = (item) => {
+    const value = favoriteJobs.find(j => j.id === item.id);
+    // console.log(value);
     if (value) {
       showToast('error');
       return;
