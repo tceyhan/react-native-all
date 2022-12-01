@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {createSlice} from '@reduxjs/toolkit';
+import { showToast } from '../../components/Toast/ToastComp';
 
 const jobSlice = createSlice({
   name: 'job',
@@ -12,6 +13,14 @@ const jobSlice = createSlice({
       state.selectedJob = action.payload;
     },
     addFavorite: (state, action) => {
+      const value = state.favoriteJobs.find(j => j.id === action.payload.id);
+    // console.log(value);
+    if (value) {
+      showToast('error');
+      return;
+    } else {
+      showToast('success');
+    }
       state.favoriteJobs.push(action.payload);
     },
     removeFavorite: (state, action) => {

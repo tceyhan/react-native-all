@@ -7,9 +7,8 @@ import Loading from '../../components/Loading';
 import useFetch from '../../hooks/useFetch';
 import DetailCard from '../../components/DetailCard';
 import {showToast} from '../../components/Toast/ToastComp';
-
 import styles from './Detail.style';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {addFavorite} from '../../redux/features/jobSlice';
 
 const Detail = ({route}) => {
@@ -17,7 +16,6 @@ const Detail = ({route}) => {
   const {loading, error, data} = useFetch(`${Config.API_URL}/${id}`);
   // console.log(data);
   const dispatch = useDispatch();
-  const {favoriteJobs} = useSelector(state => state.job);
 
   if (loading) {
     return <Loading />;
@@ -33,20 +31,17 @@ const Detail = ({route}) => {
     }
   };
 
-  const handleFav = (item) => {
-    const value = favoriteJobs.find(j => j.id === item.id);
-    // console.log(value);
-    if (value) {
-      showToast('error');
-      return;
-    } else {
-      showToast('success');
-      return dispatch(addFavorite(item));
-    }
+  const handleFav = item => {
+    dispatch(addFavorite(item));
   };
   return (
     <View style={styles.container}>
-      <DetailCard data={data} loading={loading} handleFav={handleFav} handleApply={handleApply}/>
+      <DetailCard
+        data={data}
+        loading={loading}
+        handleFav={handleFav}
+        handleApply={handleApply}
+      />
     </View>
   );
 };
