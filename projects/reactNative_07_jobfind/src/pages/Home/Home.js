@@ -18,7 +18,7 @@ const Home = ({navigation}) => {
   // console.log(data.results);
   const dispatch = useDispatch();
   const {users} = useSelector(state => state.auth);
-  console.log(users);
+  // console.log(users);
   if (error) {
     return <Error />;
   }

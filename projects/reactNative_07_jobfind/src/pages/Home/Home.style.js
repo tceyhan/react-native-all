@@ -7,12 +7,14 @@ export default StyleSheet.create({
   },
   fullName:{
     display: 'flex',
-    borderRadius: 10,
+    borderRadius: 50,
     padding: 5,
-    backgroundColor: '#c44',
+    backgroundColor: 'chocolate',
     alignSelf: 'flex-end',
     fontWeight: 'bold',
     fontSize: 17,
     color: 'white',
+    textTransform:'uppercase',
+    textAlign: 'center',
   },
 });

@@ -3,15 +3,13 @@ import {Image, StatusBar, Text, View} from 'react-native';
 import React from 'react';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-import {showToast} from '../../components/Toast/ToastComp';
 import uuid from 'react-native-uuid';
 import styles from './Register.style';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {addUser} from '../../redux/features/authSlice';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
 import Errors from '../../components/YupErrors/YupErrors';
-
 
 const RegisterSchema = Yup.object().shape({
   userName: Yup.string()
@@ -24,19 +22,14 @@ const RegisterSchema = Yup.object().shape({
     .min(4, 'Too Short! password must to contain at least 4 characters')
     .max(15, 'Too Long! password must to contain at most 15 characters')
     .required('Required'),
-  userMail: Yup.string().email('mail adress must be a valid').required('Required'),
+  userMail: Yup.string()
+    .email('mail adress must be a valid')
+    .required('Required'),
 });
 const Register = ({navigation}) => {
-  const {users} = useSelector(state => state.auth);
   const dispatch = useDispatch();
 
   function handleRegister(values) {
-    let userCheck = users.map(
-      item =>
-        item.userMail === values.userMail &&
-        item.userPassword === values.userPassword,
-    );
-    console.log(userCheck[0]);
     const user = {
       id: uuid.v4(),
       userName: values.userName,
@@ -45,16 +38,9 @@ const Register = ({navigation}) => {
       userPassword: values.userPassword,
       userMail: values.userMail,
     };
-    console.log(user);
-
-    if (userCheck[0]) {
-      showToast('varuser');
-      return;
-    } else {
-      showToast('register');
-      dispatch(addUser(user));
-      navigation.navigate('Login');
-    }
+    // console.log(user);
+    dispatch(addUser(user));
+    navigation.navigate('Login');
   }
 
   function handleLoginPage() {

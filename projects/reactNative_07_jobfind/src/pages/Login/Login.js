@@ -7,9 +7,10 @@ import Button from '../../components/Button';
 import Errors from '../../components/YupErrors';
 import {Formik} from 'formik';
 import {useSelector} from 'react-redux';
-import {showToast} from '../../components/Toast/ToastComp';
+
 
 import * as Yup from 'yup';
+import { showToast } from '../../components/Toast/ToastComp';
 const LoginSchema = Yup.object().shape({
   userMail: Yup.string()
     .email('mail adress must be a valid')
@@ -22,10 +23,10 @@ const LoginSchema = Yup.object().shape({
 
 const Login = ({navigation}) => {
   const {users} = useSelector(state => state.auth);
-  console.log(users);
+  // console.log(users);
 
   function handleLogin(values) {
-    console.log(values);
+    // console.log(values);
     let user = users.map(
       item =>
         item.userMail === values.userMail &&
@@ -37,6 +38,7 @@ const Login = ({navigation}) => {
       navigation.navigate('Home');
     } else {
       showToast('errorlogin');
+      return;
     }
   }
 
