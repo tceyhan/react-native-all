@@ -23,19 +23,19 @@ const LoginSchema = Yup.object().shape({
 
 const Login = ({navigation}) => {
   const {users} = useSelector(state => state.auth);
-  // console.log(users);
+  console.log(users);
 
   function handleLogin(values) {
-    // console.log(values);
-    let user = users.map(
+    console.log(values);
+    let user = users.some(
       item =>
         item.userMail === values.userMail &&
         item.userPassword === values.userPassword,
     );
-    console.log(user[0]);
-    if (user[0]) {
+    console.log('login user',user);
+    if (user) {
       showToast('welcome');
-      navigation.navigate('Home');
+      navigation.navigate('Home', {values});
     } else {
       showToast('errorlogin');
       return;

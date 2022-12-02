@@ -29,7 +29,7 @@ const RegisterSchema = Yup.object().shape({
 const Register = ({navigation}) => {
   const dispatch = useDispatch();
 
-  function handleRegister(values) {
+  const handleRegister = async values => {
     const user = {
       id: uuid.v4(),
       userName: values.userName,
@@ -38,10 +38,13 @@ const Register = ({navigation}) => {
       userPassword: values.userPassword,
       userMail: values.userMail,
     };
-    // console.log(user);
-    dispatch(addUser(user));
-    navigation.navigate('Login');
-  }
+    try {
+      await dispatch(addUser(user));
+      navigation.navigate('Login');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   function handleLoginPage() {
     navigation.navigate('Login');

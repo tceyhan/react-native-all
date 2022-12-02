@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
   errors: {
     borderRadius: 10,
     marginHorizontal: 5,
-    backgroundColor: '#c66',
+    backgroundColor: 'dimgray',
     alignItems: 'center',
   },
   errors_text: {
     fontSize: 15,
-    color: 'navy',
-    fontWeight: 'bold',
+    color: 'white',
+    // fontWeight: 'bold',
     fontStyle: 'italic',
   },
 });

@@ -9,7 +9,7 @@ export default StyleSheet.create({
     display: 'flex',
     borderRadius: 20,
     padding: 5,
-    backgroundColor: 'darkred',
+    backgroundColor: '#c66',
     alignSelf: 'flex-end',
     fontWeight: 'bold',
     fontSize: 17,

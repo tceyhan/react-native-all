@@ -9,19 +9,21 @@ const authSlice = createSlice({
     users: [],
   },
   reducers: {
-    addUser: (state, action) => {
-      let userCheck = state.users.map(
+    addUser: (state, {payload}) => {
+      let userCheck = state.users.some(
         item =>
-          item.userMail === action.payload.userMail &&
-          item.userPassword === action.payload.userPassword,
+          (item.userMail === payload.userMail &&
+            item.userPassword === payload.userPassword) ||
+          item.userMail === payload.userMail,
       );
-      if (userCheck[0]) {
+      console.log('usercheck', userCheck);
+      if (userCheck) {
         showToast('varuser');
         return;
       } else {
         showToast('register');
-        state.users.push(action.payload);
-        AsyncStorage.setItem('@USER', JSON.stringify(action.payload));
+        state.users.push(payload);
+        AsyncStorage.setItem('@USER', JSON.stringify(payload));
       }
     },
     removeUser: state => {
