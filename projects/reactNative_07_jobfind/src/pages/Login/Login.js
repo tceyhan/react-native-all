@@ -26,16 +26,16 @@ const Login = ({navigation}) => {
   console.log(users);
 
   function handleLogin(values) {
-    console.log(values);
+    // console.log(values);
     let user = users.some(
       item =>
         item.userMail === values.userMail &&
         item.userPassword === values.userPassword,
     );
-    console.log('login user',user);
+    console.log('login check user',user);
     if (user) {
       showToast('welcome');
-      navigation.navigate('Home', {values});
+      navigation.navigate('Home');
     } else {
       showToast('errorlogin');
       return;

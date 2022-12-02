@@ -21,9 +21,6 @@ const DrawerNavigation = () => {
           fontWeight: 'bold',
           color: 'white',
         },
-        // drawerHideStatusBarOnOpen: true,
-        // drawerStatusBarAnimation: 'fade',
-        // drawerType: 'back',
         headerShown: false,
       }}>
       <Drawer.Screen
