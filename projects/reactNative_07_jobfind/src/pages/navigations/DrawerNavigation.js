@@ -3,13 +3,15 @@ import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Favourite from '../Favourite';
 import StackNavigation from './StackNavigation';
-
+import CustomSideBarMenu from '../CustomSideBarMenu';
 
 const DrawerNavigation = () => {
   const Drawer = createDrawerNavigator();
 
   return (
     <Drawer.Navigator
+      useLegacyImplementation
+      drawerContent={props => <CustomSideBarMenu {...props} />}
       screenOptions={{
         drawerActiveBackgroundColor: '#a11',
         drawerStyle: {
