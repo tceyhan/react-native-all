@@ -7,9 +7,9 @@ export default StyleSheet.create({
   },
   fullName:{
     display: 'flex',
-    borderRadius: 50,
+    borderRadius: 20,
     padding: 5,
-    backgroundColor: 'chocolate',
+    backgroundColor: 'darkred',
     alignSelf: 'flex-end',
     fontWeight: 'bold',
     fontSize: 17,

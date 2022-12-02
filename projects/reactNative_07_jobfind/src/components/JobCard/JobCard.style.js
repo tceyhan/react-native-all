@@ -26,7 +26,7 @@ export default StyleSheet.create({
     borderRadius: 40,
     paddingVertical: 3,
     paddingHorizontal: 10,
-    backgroundColor: '#c55',
+    backgroundColor: '#c44',
     fontWeight: 'bold',
     fontSize: 16,
     color: 'white',

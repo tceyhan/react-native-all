@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
@@ -10,10 +10,12 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   inner_container: {
+    width: 100,
     flexDirection: 'row',
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingVertical: 5,
   },
   icon:{
     marginHorizontal: 5,

@@ -7,10 +7,10 @@ import Button from '../../components/Button';
 import Errors from '../../components/YupErrors';
 import {Formik} from 'formik';
 import {useSelector} from 'react-redux';
-
-
 import * as Yup from 'yup';
 import { showToast } from '../../components/Toast/ToastComp';
+
+
 const LoginSchema = Yup.object().shape({
   userMail: Yup.string()
     .email('mail adress must be a valid')
@@ -84,6 +84,7 @@ const Login = ({navigation}) => {
               IconName="account"
               IconColor="white"
               IconLeft
+              // loading
             />
             <Text style={styles.or}>OR</Text>
             <Button

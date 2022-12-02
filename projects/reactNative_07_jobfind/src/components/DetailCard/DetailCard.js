@@ -37,7 +37,7 @@ const DetailCard = ({data, handleFav, handleApply}) => {
         <Button
           style={styles.button}
           onPress={() => handleFav(data)}
-          text="Favorite Job"
+          text="Favorite"
           IconName="heart-outline"
           IconColor="white"
           IconLeft

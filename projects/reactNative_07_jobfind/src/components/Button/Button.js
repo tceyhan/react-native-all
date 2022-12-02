@@ -14,7 +14,7 @@ const Button = ({text, onPress, loading, IconName, IconColor, IconLeft}) => {
             <Icon
               style={styles.icon}
               name={IconName}
-              size={30}
+              size={25}
               color={IconColor}
             />
             <Text style={styles.title}>{text}</Text>
@@ -25,7 +25,7 @@ const Button = ({text, onPress, loading, IconName, IconColor, IconLeft}) => {
             <Icon
               style={styles.icon}
               name={IconName}
-              size={30}
+              size={25}
               color={IconColor}
             />
           </>

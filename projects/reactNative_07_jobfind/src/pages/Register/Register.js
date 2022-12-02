@@ -16,7 +16,7 @@ const RegisterSchema = Yup.object().shape({
     .min(3, 'Too Short! name must to contain at least 3 characters')
     .required('Required'),
   userSurname: Yup.string()
-    .min(3, 'Too Short! surnames must to contain at least 3 characters')
+    .min(3, 'Too Short! surname must to contain at least 3 characters')
     .required('Required'),
   userPassword: Yup.string()
     .min(4, 'Too Short! password must to contain at least 4 characters')

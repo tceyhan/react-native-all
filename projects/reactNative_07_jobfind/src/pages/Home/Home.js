@@ -43,7 +43,7 @@ const Home = ({navigation}) => {
         keyExtractor={item => item.id}
         renderItem={renderJob}
       />
-      <Pagination page={page} setPage={setPage} data={data} />
+      <Pagination page={page} setPage={setPage} data={data} loading={loading}/>
     </View>
   );
 };
