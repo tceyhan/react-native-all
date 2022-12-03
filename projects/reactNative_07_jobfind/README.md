@@ -13,39 +13,52 @@
   <img src="./media/jodfind_1_2_register.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_1_3_register.png" alt="drawing" width="200"/>
 </p>
+
 #### Login Page
+
 <p float="left">
   <img src="./media/jodfind_2_login.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_3_logindolu.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_2_login_toast.png" alt="drawing" width="200"/>
 </p>
+
 #### Home Page
+
 <p float="left">
   <img src="./media/jodfind_4_home.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_4_home_loading.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_4_home_full.png" alt="drawing" width="200"/>
 </p>
+
 #### Drawer Page
+
 <p float="left">
   <img src="./media/jodfind_5_drawer.png" alt="drawing" width="200"/>
 </p>
+
 #### Favorite Page
+
 <p float="left">
   <img src="./media/jodfind_6_fav_emty.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_6_2_fav_dolu.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_6_3_fav_remove.png" alt="drawing" width="200"/>
 </p>
 
+#### Detail Page
+
 <p float="left">
   <img src="./media/jodfind_7_detail_begin.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_7_detail_last.png" alt="drawing" width="200"/>
 </p>
+
 #### Submit - Github - Linkedin
+
 <p float="left">
   <img src="./media/jodfind_8_submit.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_9_github.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_10_linkedin.png" alt="drawing" width="200"/>
 </p>
+
 ## GEREKSİNİMLER:
 
 - Kullancılar sisteme kayıt olabilecek
