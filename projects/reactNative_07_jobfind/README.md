@@ -299,11 +299,4 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 - Detail
 - Favourite
 
-<!-- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-``` -->
 </div>
