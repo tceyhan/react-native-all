@@ -17,14 +17,13 @@
 <details><summary>PROJE IMAGES:</summary>
 <p>
 
-  #### Register Page
+#### Register Page
 
 <p float="left">
   <img src="./media/jodfind_1_1_register.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_1_2_register.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_1_3_register.png" alt="drawing" width="200"/>
 </p>
-
 
 #### Login Page
 
@@ -71,13 +70,11 @@
   <img src="./media/jodfind_10_linkedin.png" alt="drawing" width="200"/>
 </p>
 
-
 </p>
 </details>
 
 <details><summary>GEREKSİNİMLER:</summary>
 <p>
-
 
 - Kullancılar sisteme kayıt olabilecek
 - Kullanıcılar sisteme giriş yapabilecek
@@ -219,13 +216,12 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 | 3. Sistemden olumlu cevap alınır.                       |
 | 4. Kullanıcı iş başvuru sayfasına yönlendirilir.        |
 
-
 </p>
 </details>
 
-<!-- ## EKRAN TASARIMLARI -->
+<details><summary>KULLANILAN 3.RD PARTY PACKAGES ve DÖKÜMAN API :</summary>
 
-## KULLANILAN 3.RD PARTY PACKAGES ve DÖKÜMAN API
+<p>
 
 ### React-native-config
 
@@ -282,10 +278,12 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 ### status bar
 
 - [status bar config](https://reactnavigation.org/docs/status-bar/#stack)
-
 ### custom drawer
 
 - [custom drawer navigation settings/props](https://reactnavigation.org/docs/drawer-navigator/)
+
+</p>
+</details>
 
 ## PROJE GEREĞİ TASARLANAN CUSTOM COMPONENTLER
 
