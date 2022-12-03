@@ -5,6 +5,7 @@
 #### Kullanıcıların sektördeki işleri görüntüleyebileceği, iş detaylarına bakabileceği, isterse favorilerine atabileceği/varolanları kaldırabileceği, isterse iş başvurusunda bulunabileceği mobil bir iş arama uygulaması.
 
 ## PROJE IMAGES
+<p float="left">
 <img src="./media/jodfind_1_1_register.png" alt="drawing" width="200"/>
 <img src="./media/jodfind_1_2_register.png" alt="drawing" width="200"/>
 <img src="./media/jodfind_1_3_register.png" alt="drawing" width="200"/>
@@ -23,6 +24,7 @@
 <img src="./media/jodfind_8_submit.png" alt="drawing" width="200"/>
 <img src="./media/jodfind_9_github.png" alt="drawing" width="200"/>
 <img src="./media/jodfind_10_linkedin.png" alt="drawing" width="200"/>
+</p>
 ## GEREKSİNİMLER:
 
 - Kullancılar sisteme kayıt olabilecek
