@@ -245,4 +245,6 @@ export default DetailCard;
 
 ### status bar
 - [](https://reactnavigation.org/docs/status-bar/#stack)
+
+### custom drawer
  
