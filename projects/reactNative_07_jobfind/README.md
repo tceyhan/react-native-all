@@ -4,6 +4,9 @@
 
 #### Kullanıcıların sektördeki işleri görüntüleyebileceği, iş detaylarına bakabileceği, isterse favorilerine atabileceği/varolanları kaldırabileceği, isterse iş başvurusunda bulunabileceği mobil bir iş arama uygulaması.
 
+## PROJE GİF
+
+![](./media/jobfind.gif)
 ## PROJE IMAGES
 
 #### Register Page
