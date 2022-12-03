@@ -1,4 +1,4 @@
-<!Doctype html>
+<html html>
 <head>
 </head>
 <body>
@@ -285,8 +285,8 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 </p>
 </details>
 
-## PROJE GEREĞİ TASARLANAN CUSTOM COMPONENTLER
-
+<details><summary>PROJE GEREĞİ TASARLANAN CUSTOM COMPONENTLER</summary>
+<p>
 - Button
 - Input
 - Loading
@@ -298,22 +298,28 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 - DetailCard
 - FavCard
 - HeaderBar
+</p>
+</details>
 
-## PROJE GEREĞİ TASARLANAN CUSTOM NAVİGATİON
-
+<details><summary>PROJE GEREĞİ TASARLANAN CUSTOM NAVİGATİON</summary>
+<p>
 - CustomSideBarMenu
 - AuthNavigation
 - DrawerNavigation
 - StackNavigation
+</p>
+</details>
 
-## SAYFALAR
-
+<details><summary>SAYFALAR</summary>
+<p>
 - Register
 - Login
 - Home
 - Detail
 - Favourite
+</p>
+</details>
 
 </div>
 </body>
-</!Doctype>
+</html>
