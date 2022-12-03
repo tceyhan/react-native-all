@@ -14,6 +14,10 @@
 
 ![](./media/jobfind.gif)
 
+## PROJE VİDEO
+
+[](https://github.com/tceyhan/react-native-all/issues/2)
+
 <details><summary>PROJE IMAGES:</summary>
 <p>
 
