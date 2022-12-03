@@ -1,3 +1,5 @@
+<div style="background-color:#c55;text-align:center; vertical-align: middle; padding:40px 0;">
+
 # Project Name : Jobfind
 
 ## Proje Tanımı:
@@ -296,3 +298,12 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 - Home
 - Detail
 - Favourite
+
+<!-- ```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+``` -->
+</div>
