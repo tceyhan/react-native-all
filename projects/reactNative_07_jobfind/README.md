@@ -212,14 +212,14 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 
 - [react-native-config](https://www.npmjs.com/package/react-native-config)
 
-### Redux & react-redux
+### Redux-toolkit & react-redux
 
 - redux javascript için geliştirilmiş bir state yönetim aracıdır.
-- bir komponentin verilen girdisi ile çıktısı tahmin edilebilir ise redux kullanmılladır.aynı girdilere aynı çıktılar varsa kullanılır.
+- bir komponentin verilen girdisi ile çıktısı tahmin edilebilir ise redux kullanılmalıdır-aynı girdilere aynı çıktılar varsa kullanılır.
 - react-redux ise component mantığı için lazımdır.
 - [redux devTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) extension kullanımı her zaman kolaylık sağlar.
 
-- redux store'a devtools eklemek eklenir enhancer olarak.[link](https://www.npmjs.com/package/@redux-devtools/extension)
+- redux store'a devtools eklemek eklenir enhancer olarak.[link için tıkla](https://www.npmjs.com/package/@redux-devtools/extension)
 
 ### React Navigation
 
