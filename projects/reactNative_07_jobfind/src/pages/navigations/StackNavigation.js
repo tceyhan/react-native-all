@@ -5,34 +5,11 @@ import Home from '../Home';
 import Detail from '../Detail';
 import HeaderBar from '../../components/HeaderBar';
 
-import {useEffect, useState} from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {removeUser} from '../../redux/features/authSlice';
-import {useDispatch} from 'react-redux';
 
 const StackNavigation = ({navigation}) => {
   const Stack = createNativeStackNavigator();
-  const dispatch = useDispatch();
-  const [user, setUser] = useState();
 
-  const getData = async () => {
-    try {
-      const jsonValue = await AsyncStorage.getItem('@USER');
-      return jsonValue != null ? setUser(JSON.parse(jsonValue)) : null;
-    } catch (e) {
-      console.log(e);
-    }
-  };
-  useEffect(() => {
-    getData();
-  }, []);
-  console.log(user);
-
-  const handleRemove = () => {
-    dispatch(removeUser);
-    navigation.navigate('Login');
-  };
   const handleFavPage = () => {
     navigation.navigate('Favourite');
   };
@@ -61,14 +38,6 @@ const StackNavigation = ({navigation}) => {
               onPress={handleFavPage}
             />
           ),
-          headerRight: () => (
-            <Icon
-              name="logout"
-              size={30}
-              color="white"
-              onPress={handleRemove}
-            />
-          ),
         }}
       />
       <Stack.Screen
@@ -76,7 +45,7 @@ const StackNavigation = ({navigation}) => {
         component={Detail}
         options={{
           headerTitle: props => <HeaderBar {...props} />,
-          title: 'Job Detail',
+          // title: 'Job Detail',
         }}
       />
     </Stack.Navigator>

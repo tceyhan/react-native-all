@@ -34,7 +34,7 @@ const AuthNavigation = () => {
           title: 'Login',
         }}
       />
-      <Stack.Screen name="Home" component={DrawerNavigation} />
+      <Stack.Screen name="HomeScreen" component={DrawerNavigation} />
     </Stack.Navigator>
   );
 };
