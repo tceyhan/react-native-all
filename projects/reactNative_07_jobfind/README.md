@@ -1,3 +1,7 @@
+<!Doctype html>
+<head>
+</head>
+<body>
 <div style="background-color:#c55;text-align:center; vertical-align: middle; padding:40px 0;">
 
 # Project Name : Jobfind
@@ -300,3 +304,5 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 - Favourite
 
 </div>
+</body>
+</!Doctype>
