@@ -13,15 +13,18 @@
 ## PROJE GİF
 
 ![](./media/jobfind.gif)
-## PROJE IMAGES
 
-#### Register Page
+<details><summary>PROJE IMAGES:</summary>
+<p>
+
+  #### Register Page
 
 <p float="left">
   <img src="./media/jodfind_1_1_register.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_1_2_register.png" alt="drawing" width="200"/>
   <img src="./media/jodfind_1_3_register.png" alt="drawing" width="200"/>
 </p>
+
 
 #### Login Page
 
@@ -68,7 +71,13 @@
   <img src="./media/jodfind_10_linkedin.png" alt="drawing" width="200"/>
 </p>
 
-## GEREKSİNİMLER:
+
+</p>
+</details>
+
+<details><summary>GEREKSİNİMLER:</summary>
+<p>
+
 
 - Kullancılar sisteme kayıt olabilecek
 - Kullanıcılar sisteme giriş yapabilecek
@@ -209,6 +218,10 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 | 2. Kullanıcının işe başvurma isteği sisteme gönderilir. |
 | 3. Sistemden olumlu cevap alınır.                       |
 | 4. Kullanıcı iş başvuru sayfasına yönlendirilir.        |
+
+
+</p>
+</details>
 
 <!-- ## EKRAN TASARIMLARI -->
 
