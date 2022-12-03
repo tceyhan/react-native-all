@@ -16,19 +16,20 @@ import {useNavigation} from '@react-navigation/native';
 
 const CustomSideBarMenu = props => {
   console.log('custom side bar', props.user);
-
+  const id = props.user.id;
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
   const handleRemove = () => {
-    dispatch(removeUser);
+    dispatch(removeUser(id));
     navigation.navigate('Login');
   };
+
   return (
     <View style={styles.container}>
       {/*Top Large Image */}
       <Image
-        source={require('../../assets/jobfind.png')}
+        source={require('../../assets/searchImg.png')}
         style={styles.sideMenuProfileIcon}
       />
       <DrawerContentScrollView {...props}>

@@ -26,9 +26,10 @@ const authSlice = createSlice({
         AsyncStorage.setItem('@USER', JSON.stringify(payload));
       }
     },
-    removeUser: state => {
+    removeUser: (state, {payload}) => {
+      state.users = state.users.filter(user => user.id !== payload);
       AsyncStorage.removeItem('@USER');
-      return state.users.pop();
+      state.users;
     },
   },
 });
