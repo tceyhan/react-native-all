@@ -14,7 +14,7 @@
 
 ![](./media/jobfind.gif)
 
-> <details><summary>PROJE IMAGES:</summary>
+<details><summary>PROJE IMAGES:</summary>
 <p>
 
 #### Register Page
