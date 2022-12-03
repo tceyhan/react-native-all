@@ -4,6 +4,8 @@
 
 #### Kullanıcıların sektördeki işleri görüntüleyebileceği, iş detaylarına bakabileceği, isterse favorilerine atabileceği/varolanları kaldırabileceği, isterse iş başvurusunda bulunabileceği mobil bir iş arama uygulaması.
 
+## PROJE IMAGES
+
 ## GEREKSİNİMLER:
 
 - Kullancılar sisteme kayıt olabilecek
@@ -15,6 +17,7 @@
 - Kullanıcılar iş başvurusunda bulunabilecek
 
 ## AKTÖRLER VE AKSİYONLAR
+
 ### KULLANICI
 
 - Kayıt olma
@@ -45,21 +48,38 @@ Tanım: Kullanıcı kayıt oluşturma sayfasından sisteme kayıt olabilir.
 | 10. Kullanıcı Giriş Yapma sayfasına gönderilir.      |
 
 | Olumsuz Durum 1: Kullanıcı geçersiz bilgiler girebilir.      |
-| ------------------------------------------------------------ | --- |
+| ------------------------------------------------------------ |
 | 1. Kullanıcı kayıt oluşturma ekranına gider.                 |
 | 2. Kullanıcı adı alanını doldurur.                           |
 | 3. Kullanıcı adı 3 karakterden kısa olursa uyarı gösterilir. |
 | 4. Kullanıcı soyadı alanını doldurur.                        |
-| 5. Kullanıcı soyadı 3 karakten kısa olursa uyarı gösterilir. |     |
+| 5. Kullanıcı soyadı 3 karakten kısa olursa uyarı gösterilir. |
 | 6. Kullanıcı şifre alanını doldurur.                         |
-| 7. Kullanıcı şifre 4 karakterden az olursa uyarı gösterilir. |     |
+| 7. Kullanıcı şifre 4 karakterden az olursa uyarı gösterilir. |
 | 8. Kullanıcı e-mail alanını doldurur.                        |
-| 9. Kullanıcı geçersiz e-mail olduğu sürece uyarı gösterilir. |     |
+| 9. Kullanıcı geçersiz e-mail olduğu sürece uyarı gösterilir. |
 | 10. Kullanıcı Register butonuna tıklar.                      |
 | 11. Girilen bilgiler kontrol edilir.                         |
 | 12. Girilen bilgiler sisteme gönderilir.                     |
 | 13. Sistemden onay gelir.                                    |
 | 14. Kullanıcı Giriş Yapma sayfasına gönderilir.              |
+
+| Olumsuz Durum 2: Kullanıcı varolan kullanıcı bilgileri girebilir. |
+| ----------------------------------------------------------------- |
+| 1. Kullanıcı kayıt oluşturma ekranına gider.                      |
+| 2. Kullanıcı adı alanını doldurur.                                |
+| 3. Kullanıcı adı 3 karakterden kısa olursa uyarı gösterilir.      |
+| 4. Kullanıcı soyadı alanını doldurur.                             |
+| 5. Kullanıcı soyadı 3 karakten kısa olursa uyarı gösterilir.      |
+| 6. Kullanıcı şifre alanını doldurur.                              |
+| 7. Kullanıcı şifre 4 karakterden az olursa uyarı gösterilir.      |
+| 8. Kullanıcı e-mail alanını doldurur.                             |
+| 9. Kullanıcı geçersiz e-mail olduğu sürece uyarı gösterilir.      |
+| 10. Kullanıcı Register butonuna tıklar.                           |
+| 11. Girilen bilgiler kontrol edilir.                              |
+| 12. Girilen bilgiler sisteme gönderilir.                          |
+| 13. Girilen bilgiler sistemde kayıtlı ise uyarı gösterilir.       |
+| 14. Kullanıcı Giriş Yapma sayfasına yönlendirilir.                |
 
 #### 2) Giriş Yapma
 
@@ -193,6 +213,7 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 - [custom drawer navigation settings/props](https://reactnavigation.org/docs/drawer-navigator/)
 
 ## PROJE GEREĞİ TASARLANAN CUSTOM COMPONENTLER
+
 - Button
 - Input
 - Loading
@@ -201,18 +222,21 @@ Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 - Toast
 - Pagination
 - JobCard
-- DetailCard 
+- DetailCard
 - FavCard
 - HeaderBar
+
 ## PROJE GEREĞİ TASARLANAN CUSTOM NAVİGATİON
+
 - CustomSideBarMenu
 - AuthNavigation
 - DrawerNavigation
 - StackNavigation
+
 ## SAYFALAR
+
 - Register
-- Login 
-- Home 
+- Login
+- Home
 - Detail
 - Favourite
- 
