@@ -5,25 +5,24 @@
 #### Kullanıcıların sektördeki işleri görüntüleyebileceği, iş detaylarına bakabileceği, isterse favorilerine atabileceği/varolanları kaldırabileceği, isterse iş başvurusunda bulunabileceği mobil bir iş arama uygulaması.
 
 ## PROJE IMAGES
-![](./jobfind%20media/jodfind_1_1_register.png){width=50%}
-![](./jobfind%20media/jodfind_1_2_register.png)
-![](./jobfind%20media/jodfind_1_3_register.png)
-![](./jobfind%20media/jodfind_2_login.png)
-![](./jobfind%20media/jodfind_3_logindolu.png)
-![](./jobfind%20media/jodfind_2_login_toast.png)
-![](./jobfind%20media/jodfind_4_home.png)
-![](./jobfind%20media/jodfind_4_home_loading.png)
-![](./jobfind%20media/jodfind_4_home_full.png)
-![](./jobfind%20media/jodfind_5_drawer.png)
-![](./jobfind%20media/jodfind_6_fav_emty.png)
-![](./jobfind%20media/jodfind_6_2_fav_dolu.png)
-![](./jobfind%20media/jodfind_6_3_fav_remove.png)
-![](./jobfind%20media/jodfind_7_detail_begin.png)
-![](./jobfind%20media/jodfind_7_detail_last.png)
-![](./jobfind%20media/jodfind_8_submit.png)
-![](./jobfind%20media/jodfind_9_github.png)
-![](./jobfind%20media/jodfind_10_linkedin.png)
-
+<img src="./media/jodfind_1_1_register.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_1_2_register.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_1_3_register.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_2_login.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_3_logindolu.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_2_login_toast.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_4_home.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_4_home_loading.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_4_home_full.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_5_drawer.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_6_fav_emty.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_6_2_fav_dolu.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_6_3_fav_remove.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_7_detail_begin.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_7_detail_last.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_8_submit.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_9_github.png" alt="drawing" width="200"/>
+<img src="./media/jodfind_10_linkedin.png" alt="drawing" width="200"/>
 ## GEREKSİNİMLER:
 
 - Kullancılar sisteme kayıt olabilecek
