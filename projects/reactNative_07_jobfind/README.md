@@ -1,8 +1,8 @@
-# Project Name : jobfind
+# Project Name : Jobfind
 
 ## Proje Tanımı:
 
-#### Kullanıcıların sektördeki işleri görüntüleyebileceği, iş detaylarına bakabileceği, isterse favorilerine atabileceği/varolanları kaldırabileceği, isterse iş başvurusunda bulunabileceği veya başvurduğu işten vazgeçebileceği mobil bir uygulama.
+#### Kullanıcıların sektördeki işleri görüntüleyebileceği, iş detaylarına bakabileceği, isterse favorilerine atabileceği/varolanları kaldırabileceği, isterse iş başvurusunda bulunabileceği mobil bir iş arama uygulaması.
 
 ## GEREKSİNİMLER:
 
@@ -13,10 +13,8 @@
 - Kullanıcılar isterlerse favorilere atabilecek
 - Kullanıcılar favorilerinde varolan işleri kaldırabilecek
 - Kullanıcılar iş başvurusunda bulunabilecek
-- Kullanıcılar başvurduğu işten vazgeçebilecek
 
 ## AKTÖRLER VE AKSİYONLAR
-
 ### KULLANICI
 
 - Kayıt olma
@@ -26,7 +24,6 @@
 - İşleri favoriye atabilme
 - Favorideki işleri kaldırabilme
 - İşlere başvuru yapabilme
-- Başvuru yapılmış iş başvurusundan vazgeçebilme
 
 ## ADIM ADIM GÖSTERİM
 
@@ -37,36 +34,32 @@ Tanım: Kullanıcı kayıt oluşturma sayfasından sisteme kayıt olabilir.
 | Olumlu Durum : Kullanıcının hesabının oluşturulması. |
 | ---------------------------------------------------- |
 | 1. Kullanıcı kayıt oluşturma ekranına gider.         |
-| 2. Kullanıcı e-posta alanını doldurur.               |
-| 3. Kullanıcı şifre alanını doldurur.                 |
-| 4. Kullanıcı şifre tekrarını doldurur.               |
-| 5. Kullanıcı Kayıt Oluştur butonuna tıklar.          |
-| 6. Girilen bilgiler kontrol edilir.                  |
-| 7. Girilen bilgiler sisteme gönderilir.              |
-| 8. Sistemden onay gelir.                             |
-| 9. Kullanıcı Giriş Yapma sayfasına gönderilir.       |
+| 2. Kullanıcı adı alanını doldurur.                   |
+| 3. Kullanıcı soyadı alanını doldurur.                |
+| 4. Kullanıcı şifre alanını doldurur.                 |
+| 5. Kullanıcı e-mail alanını doldurur.                |
+| 6. Kullanıcı Register butonuna tıklar.               |
+| 7. Girilen bilgiler kontrol edilir.                  |
+| 8. Girilen bilgiler sisteme gönderilir.              |
+| 9. Sistemden onay gelir.                             |
+| 10. Kullanıcı Giriş Yapma sayfasına gönderilir.      |
 
-| Olumsuz Durum 1: Kullanıcı geçersiz bir şifre girebilir. |
-| -------------------------------------------------------- |
-| 1. Kullanıcı kayıt oluşturma ekranına gider.             |
-| 2. Kullanıcı e-posta alanını doldurur.                   |
-| 3. Kullanıcı şifre alanını doldurur.                     |
-| 4. Kullanıcı şifre tekrarını doldurur.                   |
-| 5. Kullanıcı Kayıt Oluştur butonuna tıklar.              |
-| 6. Girilen bilgiler kontrol edilir.                      |
-| 7. Kullanıcıya geçersiz bir şifre uyarısı gösterilir.    |
-
-| Olumsuz Durum 2: Kullanıcı geçersiz e-posta girebilir. |
-| ------------------------------------------------------ |
-| 1. Kullanıcı kayıt oluşturma ekranına gider.           |
-| 2. Kullanıcı e-posta alanını doldurur.                 |
-| 3. Kullanıcı şifre alanını doldurur.                   |
-| 4. Kullanıcı şifre tekrarını doldurur.                 |
-| 5. Kullanıcı Kayıt Oluştur butonuna tıklar.            |
-| 6. Girilen bilgiler kontrol edilir.                    |
-| 7. Kullanıcıya geçersiz e-posta uyarısı gösterilir.    |
-
-...
+| Olumsuz Durum 1: Kullanıcı geçersiz bilgiler girebilir.      |
+| ------------------------------------------------------------ | --- |
+| 1. Kullanıcı kayıt oluşturma ekranına gider.                 |
+| 2. Kullanıcı adı alanını doldurur.                           |
+| 3. Kullanıcı adı 3 karakterden kısa olursa uyarı gösterilir. |
+| 4. Kullanıcı soyadı alanını doldurur.                        |
+| 5. Kullanıcı soyadı 3 karakten kısa olursa uyarı gösterilir. |     |
+| 6. Kullanıcı şifre alanını doldurur.                         |
+| 7. Kullanıcı şifre 4 karakterden az olursa uyarı gösterilir. |     |
+| 8. Kullanıcı e-mail alanını doldurur.                        |
+| 9. Kullanıcı geçersiz e-mail olduğu sürece uyarı gösterilir. |     |
+| 10. Kullanıcı Register butonuna tıklar.                      |
+| 11. Girilen bilgiler kontrol edilir.                         |
+| 12. Girilen bilgiler sisteme gönderilir.                     |
+| 13. Sistemden onay gelir.                                    |
+| 14. Kullanıcı Giriş Yapma sayfasına gönderilir.              |
 
 #### 2) Giriş Yapma
 
@@ -77,7 +70,7 @@ Tanım: Kullanıcı sistemde kayıtlı e-posta adresi ve şifresi ile sisteme gi
 | 1. Kullanıcı giriş yapma sayfasına tıklar.       |
 | 2. Kullanıcı e-posta alanını doldurur.           |
 | 3. Kullanıcı şifre alanını doldurur.             |
-| 4. Kullanıcı Giriş Yap butonuna tıklar.          |
+| 4. Kullanıcı Login butonuna tıklar.              |
 | 5. Kullanıcı bilgileri sisteme gönderilir.       |
 | 6. Girilen bilgiler kontrol edilir.              |
 | 7. Kullanıcıya Giriş başarılı mesajı gönderilir. |
@@ -98,7 +91,7 @@ Tanım: Kullanıcı işlerin detaylarını görüntüler.
 
 | Olumlu Durum                                   |
 | ---------------------------------------------- |
-| 1. Kullanıcı işin üzerine tıklar.              |
+| 1. Kullanıcı iş kartının üzerine tıklar.       |
 | 2. Kullanıcı iş detay sayfasına yönlendirilir. |
 | 3. Kullanıcı işin detaylarını görüntüler.      |
 
@@ -106,70 +99,44 @@ Tanım: Kullanıcı işlerin detaylarını görüntüler.
 
 Tanım: Kullanıcı sistemde kayıtlı bir işi favorilerine ekler.
 
-| Olumlu Durum                                      |
-| ------------------------------------------------- |
-| 1. Kullanıcı favori butonuna tıklar               |
-| 2. Kullanıcının favori isteği sisteme gönderilir. |
-| 3. Sistemden olumlu cevap alınır.                 |
-| 4. Favori butonunun tasarımı güncellenir.         |
+| Olumlu Durum                                                                      |
+| --------------------------------------------------------------------------------- |
+| 1. Kullanıcı Favori butonuna tıklar                                               |
+| 2. Kullanıcının favori isteği sisteme gönderilir.                                 |
+| 3. Sistemden olumlu cevap alınır.                                                 |
+| 4. Kullanıcıya favoriye ekleme işleminin başarılı olduğuna dair mesaj gösterilir. |
 
 #### 6) Favorilerde olan işleri kaldırma
 
 Tanım: Kullanıcı favorilerinde kayıtlı bir işi favorilerinden kaldırır.
 
-| Olumlu Durum                                                  |
-| ------------------------------------------------------------- |
-| 1. Kullanıcı favori butonuna tıklar                           |
-| 2. Kullanıcının favoriden kaldırma isteği sisteme gönderilir. |
-| 3. Sistemden olumlu cevap alınır.                             |
-| 4. Favori butonunun tasarımı güncellenir.                     |
+| Olumlu Durum                                                                 |
+| ---------------------------------------------------------------------------- |
+| 1. Kullanıcı Remove butonuna tıklar                                          |
+| 2. Kullanıcının favoriden kaldırma isteği sisteme gönderilir.                |
+| 3. Sistemden olumlu cevap alınır.                                            |
+| 4. Kullanıcıya kaldırılma işleminin başarılı olduğuna dair mesaj gösterilir. |
 
 #### 7) İşe Başvuru yapma
 
 Tanım: Kullanıcı sistemde kayıtlı bir işe başvuru yapar.
 
-| Olumlu Durum                                                                |
-| --------------------------------------------------------------------------- |
-| 1. Kullanıcı İşe Başvur butonuna tıklar                                     |
-| 2. Kullanıcının işe başvurma isteği sisteme gönderilir.                     |
-| 3. Sistemden olumlu cevap alınır.                                           |
-| 4. İşe Başvur butonunun ismi Vazgeç olarak yapılır ve tasarımı güncellenir. |
-
-#### 8) Başvurulan işten vazgeçme
-
-Tanım: Kullanıcı başvurduğu işten geri çekilir.
-
-| Olumlu Durum                                                         |
-| -------------------------------------------------------------------- |
-| 1. Kullanıcı Vazgeç butonuna tıklar                                  |
-| 2. Kullanıcının geri çekilme isteği sisteme gönderilir.              |
-| 3. Sistemden olumlu cevap alınır.                                    |
-| 4. Vazgeç butonunun ismi İşe Başvur yapılır ve tasarımı güncellenir. |
+| Olumlu Durum                                            |
+| ------------------------------------------------------- |
+| 1. Kullanıcı İşe Başvur butonuna tıklar                 |
+| 2. Kullanıcının işe başvurma isteği sisteme gönderilir. |
+| 3. Sistemden olumlu cevap alınır.                       |
+| 4. Kullanıcı iş başvuru sayfasına yönlendirilir.        |
 
 <!-- ## EKRAN TASARIMLARI -->
 
+## KULLANILAN 3.RD PARTY PACKAGES ve DÖKÜMAN API
+
 ### React-native-config
 
-- `npm i react-native-config`
-- Proje kök klasör dizininde olacak şekilde .env adında yeni bir dosya oluşturuyoruz. içeriği şu örnekteki gibi olabilir.
+- [react-native-config](https://www.npmjs.com/package/react-native-config)
 
-```
-API_URL=https://myapi.com
-GOOGLE_MAPS_API_KEY=abcdefgh
-```
-
-- android/app/build.gradle dosya içerisine 2.satıra bu kodu ekliyoruz.
-  `apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"`
-- Component içerisinde kullanımı =>
-
-```
-import Config from "react-native-config";
-
-Config.API_URL; // 'https://myapi.com'
-Config.GOOGLE_MAPS_API_KEY; // 'abcdefgh'
-```
-
-### Redux
+### Redux & react-redux
 
 - redux javascript için geliştirilmiş bir state yönetim aracıdır.
 - bir komponentin verilen girdisi ile çıktısı tahmin edilebilir ise redux kullanmılladır.aynı girdilere aynı çıktılar varsa kullanılır.
@@ -180,71 +147,72 @@ Config.GOOGLE_MAPS_API_KEY; // 'abcdefgh'
 
 ### React Navigation
 
-- `npm install @react-navigation/native`
-- `npm install react-native-screens react-native-safe-area-context`
-- android/app/src/main/java/<your package name>/MainActivity.java
-  Add the following code to the body of MainActivity class:
-
-```
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-  super.onCreate(null);
-}
-```
-
-and make sure to add the following import statement at the top of this file below your package statement:
-`import android.os.Bundle;`
+- [
+  React Navigation](https://reactnavigation.org/docs/getting-started)
 
 ### Icons
 
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons#android)
 - [MaterialCommunityIcons](https://materialdesignicons.com/)
 
-
 ### Lottie (error and loading)
 
 - [Lottie döküman](https://www.npmjs.com/package/lottie-react-native)
-- `npm i lottie-react-native`
 
 ### Render HTML
+
 - [react-native-render-html](https://www.npmjs.com/package/react-native-render-html)
-- ``` 
-import {useWindowDimensions} from 'react-native';
-import RenderHtml from 'react-native-render-html';
 
-const DetailCard = ({data}) => {
-  const {width} = useWindowDimensions();
-  const source = { html:data.contents}
-  return (
-    <View>
-      <RenderHtml contentWidth={width} source={source} />
-    </View>
-  );
-};
+### react-native-toast-message
 
-export default DetailCard;
- ```
+- [react-native-toast-message](https://github.com/calintamas/react-native-toast-message/blob/main/docs/quick-start.md)
 
- ### react-native-toast-message
+### axios
 
- - [react-native-toast-message](https://github.com/calintamas/react-native-toast-message/blob/main/docs/quick-start.md)
- 
+- [ axios react native version](https://www.npmjs.com/package/axios/v/0.26.0)
 
- ### axios
- - [ axios react native version](https://www.npmjs.com/package/axios/v/0.26.0)
+### Linking
 
- ### Linking
- - [](https://reactnative.dev/docs/linking)
+- [Document](https://reactnative.dev/docs/linking)
 
 ### Formik and yup
-- [Formik]()
-- [Yup]()
+
+- [Formik](https://formik.org/docs/overview)
+- [Yup](https://www.npmjs.com/package/yup)
 
 ### uuid
- - [react native uuid](https://www.npmjs.com/package/react-native-uuid)
+
+- [react native uuid](https://www.npmjs.com/package/react-native-uuid)
 
 ### status bar
-- [](https://reactnavigation.org/docs/status-bar/#stack)
+
+- [status bar config](https://reactnavigation.org/docs/status-bar/#stack)
 
 ### custom drawer
+
+- [custom drawer navigation settings/props](https://reactnavigation.org/docs/drawer-navigator/)
+
+## PROJE GEREĞİ TASARLANAN CUSTOM COMPONENTLER
+- Button
+- Input
+- Loading
+- Error
+- YupErrors
+- Toast
+- Pagination
+- JobCard
+- DetailCard 
+- FavCard
+- HeaderBar
+## PROJE GEREĞİ TASARLANAN CUSTOM NAVİGATİON
+- CustomSideBarMenu
+- AuthNavigation
+- DrawerNavigation
+- StackNavigation
+## SAYFALAR
+- Register
+- Login 
+- Home 
+- Detail
+- Favourite
  
